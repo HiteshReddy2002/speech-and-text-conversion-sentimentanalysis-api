@@ -1,0 +1,9 @@
+Sentiment Analysis for converted_20250221-020537AM.txt:
+
+Original Text:
+recorded files show
+
+Sentiment Score: 0.0
+Sentiment Magnitude: 0.0
+
+Overall Sentiment: Neutral

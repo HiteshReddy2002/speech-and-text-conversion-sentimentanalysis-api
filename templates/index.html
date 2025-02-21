@@ -28,7 +28,8 @@
                             Your browser does not support the audio element.
                         </audio><br>
                         {{ file }}
-                        <a href="{{ url_for('uploaded_file', filename=file.replace('.wav', '.txt')) }}">View Transcript</a>
+                        <a href="{{ url_for('uploaded_file', filename=file.replace('.wav', '.txt')) }}"> View Transcript</a>
+                        <a href="{{ url_for('get_sentiment_analysis', filename='sentiment_' + file.replace('.wav', '.txt')) }}">View Sentiment Analysis</a>
                     </li>
                     {% endfor %}
                 </ul>

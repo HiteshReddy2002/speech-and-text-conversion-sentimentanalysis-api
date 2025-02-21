@@ -6,11 +6,14 @@ import subprocess
 from google.cloud import speech, texttospeech
 import io
 import wave
+from google.cloud import language_v1
+
 
 app = Flask(__name__)
 
 # Configure upload folder
 UPLOAD_FOLDER = 'uploads'
+SENTIMENT_ANALYSIS_FOLDER = 'sentiment_analysis'
 ALLOWED_EXTENSIONS = {'wav'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -38,6 +41,8 @@ def convert_to_16000hz(input_path, output_path):
 )
 
         print(f"Converted {input_path} to {output_path} with 16000 Hz sample rate")
+        os.remove(input_path)  # Delete the original
+        
         return output_path
     except Exception as e:
         print(f"Error during conversion: {e}")
@@ -45,12 +50,20 @@ def convert_to_16000hz(input_path, output_path):
 
 # Fetch files for display
 def get_files():
-    files = []
+    # files = []
+
+    # for filename in os.listdir(UPLOAD_FOLDER):
+    #     if allowed_file(filename) or filename.endswith('.txt'):
+    #         files.append(filename)
+    # files.sort(reverse=True)
+    # return files
+
+    
+    files = set()  # Use a set to prevent duplicates
     for filename in os.listdir(UPLOAD_FOLDER):
-        if allowed_file(filename) or filename.endswith('.txt'):
-            files.append(filename)
-    files.sort(reverse=True)
-    return files
+        if allowed_file(filename):
+            files.add(filename)  # Store only unique file names
+    return sorted(files, reverse=True)  # Sort for consistency
 
 @app.route('/')
 def index():
@@ -91,8 +104,16 @@ def upload_audio():
     except Exception as e:
         print(f"Error during transcription: {e}")
         return f"Error during transcription: {e}", 500
+    
+    try:
+        sentiment_analysis()
+    except Exception as e:
+        print(f"Error during sentiment analysis: {e}")
+        return f"Error during sentiment analysis: {e}", 500
+    
 
-    return "Uploaded and transcribed successfully (Check console for transcription result)", 200
+
+    return "Uploaded ,transcribed and sentiment analysis successfully (Check console for transcription result)", 200
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
@@ -129,11 +150,14 @@ def transcribe_audio(file_path):
             print(f"Transcription successful: {transcript}")
 
             # Save the transcription to a text file
+
+           
             text_file_path = os.path.splitext(file_path)[0] + ".txt"
             with open(text_file_path, 'w') as text_file:
                 text_file.write(transcript)
 
             print(f"Transcription saved to: {text_file_path}")
+
             return text_file_path  # Return the path to the text file for displaying later
 
         else:
@@ -143,6 +167,7 @@ def transcribe_audio(file_path):
     except Exception as e:
         print(f"Error in transcription: {e}")
         return None
+
 
 @app.route('/upload_text', methods=['POST'])
 def upload_text():
@@ -194,6 +219,73 @@ def ping():
 @app.route('/info', methods=['GET'])
 def info():
     return {"status": "active", "version": "1.0.1", "description": "Audio and TTS processing app"}
+
+@app.route('/sentiment_analysis/<filename>')
+def get_sentiment_analysis(filename):
+    # Construct the file path for sentiment analysis
+    sentiment_file_path = os.path.join(SENTIMENT_ANALYSIS_FOLDER, filename)
+    print("entered the sentiment method")
+    print(filename)
+    print(SENTIMENT_ANALYSIS_FOLDER)
+    if os.path.exists(sentiment_file_path):
+        # Send the sentiment analysis file if it exists
+        return send_from_directory(SENTIMENT_ANALYSIS_FOLDER, filename)
+    else:
+        # Return an error if the sentiment analysis file doesn't exist
+        return "Sentiment Analysis file not found.", 404
+
+
+
+# Process the text files and perform sentiment analysis
+def sentiment_analysis():
+    for filename in os.listdir(UPLOAD_FOLDER):
+        if filename.endswith('.txt'):
+            text_file_path = os.path.join(UPLOAD_FOLDER, filename)
+            
+            # Read the transcription text
+            with open(text_file_path, 'r') as file:
+                transcription_text = file.read()
+
+            # Perform sentiment analysis
+            sentiment_score, sentiment_magnitude = analyze_sentiment(transcription_text)
+
+            # Determine sentiment label
+            if sentiment_score >= 0.25:
+                sentiment_label = 'Positive'
+            elif sentiment_score <= -0.25:
+                sentiment_label = 'Negative'
+            else:
+                sentiment_label = 'Neutral'
+
+            # Create the sentiment analysis result
+            sentiment_result = f"Sentiment Analysis for {filename}:\n\n"
+            sentiment_result += f"Original Text:\n{transcription_text}\n\n"
+            sentiment_result += f"Sentiment Score: {sentiment_score}\n"
+            sentiment_result += f"Sentiment Magnitude: {sentiment_magnitude}\n\n"
+            sentiment_result += f"Overall Sentiment: {sentiment_label}\n"
+
+            # Save the sentiment result in the 'sentiment_analysis' folder
+            sentiment_filename = f"sentiment_{filename}"
+            sentiment_file_path = os.path.join(SENTIMENT_ANALYSIS_FOLDER, sentiment_filename)
+
+            with open(sentiment_file_path, 'w') as sentiment_file:
+                sentiment_file.write(sentiment_result)
+
+            print(f"Sentiment result saved: {sentiment_file_path}")
+
+
+# Perform sentiment analysis using Google Cloud Natural Language API
+def analyze_sentiment(text):
+    client = language_v1.LanguageServiceClient()
+
+    document = language_v1.Document(content=text, type_=language_v1.Document.Type.PLAIN_TEXT)
+    
+    # Send the request to analyze sentiment
+    sentiment = client.analyze_sentiment(request={'document': document}).document_sentiment
+
+    # Return sentiment score and magnitude
+    return sentiment.score, sentiment.magnitude
+
 
 if __name__ == '__main__':
     app.run(debug=True)
