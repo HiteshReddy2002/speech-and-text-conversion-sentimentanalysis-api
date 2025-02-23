@@ -7,12 +7,14 @@ from google.cloud import speech, texttospeech
 import io
 import wave
 from google.cloud import language_v1
+from datetime import datetime
 
 
 app = Flask(__name__)
 
 # Configure upload folder
 UPLOAD_FOLDER = 'uploads'
+TTS_FOLDER='tts'
 SENTIMENT_ANALYSIS_FOLDER = 'sentiment_analysis'
 ALLOWED_EXTENSIONS = {'wav'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -106,7 +108,7 @@ def upload_audio():
         return f"Error during transcription: {e}", 500
     
     try:
-        sentiment_analysis()
+        sentiment_analysis(UPLOAD_FOLDER)
     except Exception as e:
         print(f"Error during sentiment analysis: {e}")
         return f"Error during sentiment analysis: {e}", 500
@@ -180,7 +182,13 @@ def upload_text():
     tts_folder = 'tts'
     os.makedirs(tts_folder, exist_ok=True)
     filename = datetime.now().strftime("%Y%m%d-%I%M%S%p") + '.mp3'
+    text_filename = datetime.now().strftime("%Y%m%d-%I%M%S%p") + '.txt'
     output_path = os.path.join(tts_folder, filename)
+    text_output_path = os.path.join(tts_folder, text_filename)
+
+    with open(text_output_path, 'w') as file:
+        file.write(text)
+    sentiment_analysis(tts_folder)
 
     try:
         synthesize_text(text, output_path)
@@ -237,10 +245,10 @@ def get_sentiment_analysis(filename):
 
 
 # Process the text files and perform sentiment analysis
-def sentiment_analysis():
-    for filename in os.listdir(UPLOAD_FOLDER):
+def sentiment_analysis(folder):
+    for filename in os.listdir(folder):
         if filename.endswith('.txt'):
-            text_file_path = os.path.join(UPLOAD_FOLDER, filename)
+            text_file_path = os.path.join(folder, filename)
             
             # Read the transcription text
             with open(text_file_path, 'r') as file:

@@ -1,9 +1,0 @@
-Sentiment Analysis for converted_20250221-020823AM.txt:
-
-Original Text:
-hello my testing 1 2 3
-
-Sentiment Score: 0.0
-Sentiment Magnitude: 0.0
-
-Overall Sentiment: Neutral

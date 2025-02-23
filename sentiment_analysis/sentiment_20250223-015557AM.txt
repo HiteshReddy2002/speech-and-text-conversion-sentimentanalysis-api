@@ -1,0 +1,9 @@
+Sentiment Analysis for 20250223-015557AM.txt:
+
+Original Text:
+green
+
+Sentiment Score: 0.20000000298023224
+Sentiment Magnitude: 0.20000000298023224
+
+Overall Sentiment: Neutral
