@@ -50,9 +50,11 @@
                     <li>
                         <audio controls>
                             <source src="{{ url_for('serve_tts_file', filename=file) }}" type="audio/mp3">
-                            Your browser does not support the audio element.
+                                                        Your browser does not support the audio element.
                         </audio>
                         <br>{{ file }}
+                        <a href="{{ url_for('get_sentiment_analysis', filename='sentiment_' + file.replace('.mp3', '.txt')) }}">View Sentiment Analysis</a>
+                    
                     </li>
                     {% endfor %}
                 </ul>

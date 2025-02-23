@@ -1,0 +1,9 @@
+Sentiment Analysis for 20250223-020300AM.txt:
+
+Original Text:
+you are a good looking guy
+
+Sentiment Score: 0.8999999761581421
+Sentiment Magnitude: 0.8999999761581421
+
+Overall Sentiment: Positive
