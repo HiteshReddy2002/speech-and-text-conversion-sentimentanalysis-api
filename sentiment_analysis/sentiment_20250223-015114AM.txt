@@ -1,9 +1,0 @@
-Sentiment Analysis for 20250223-015114AM.txt:
-
-Original Text:
-god mode
-
-Sentiment Score: 0.800000011920929
-Sentiment Magnitude: 0.800000011920929
-
-Overall Sentiment: Positive

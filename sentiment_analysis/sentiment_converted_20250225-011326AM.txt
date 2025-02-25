@@ -1,0 +1,9 @@
+Sentiment Analysis for converted_20250225-011326AM.txt:
+
+Original Text:
+please stop it
+
+Sentiment Score: -0.800000011920929
+Sentiment Magnitude: 0.800000011920929
+
+Overall Sentiment: Negative
