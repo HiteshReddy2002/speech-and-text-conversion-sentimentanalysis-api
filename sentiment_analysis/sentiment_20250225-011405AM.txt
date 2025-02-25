@@ -1,0 +1,9 @@
+Sentiment Analysis for 20250225-011405AM.txt:
+
+Original Text:
+lemonade
+
+Sentiment Score: 0.10000000149011612
+Sentiment Magnitude: 0.10000000149011612
+
+Overall Sentiment: Neutral
