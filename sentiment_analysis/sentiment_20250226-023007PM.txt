@@ -1,0 +1,9 @@
+Sentiment Analysis for 20250226-023007PM.txt:
+
+Original Text:
+who are you
+
+Sentiment Score: 0.10000000149011612
+Sentiment Magnitude: 0.10000000149011612
+
+Overall Sentiment: Neutral
