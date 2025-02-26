@@ -1,0 +1,9 @@
+Sentiment Analysis for converted_20250226-030425PM.txt:
+
+Original Text:
+hello how are you bro
+
+Sentiment Score: 0.20000000298023224
+Sentiment Magnitude: 0.20000000298023224
+
+Overall Sentiment: Neutral
