@@ -33,15 +33,39 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 #Convert audio to LINEAR16 with 16kHz
+
+
 def convert_to_16000hz(input_path, output_path):
     try:
-        subprocess.run(
-            ['ffmpeg', '-i', input_path, '-acodec', 'pcm_s16le', '-ar', '16000', '-ac', '1', output_path],
-            check=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            shell=True  # Add shell=True to ensure Windows compatibility
-)
+        # Load the input audio file
+        audio = AudioSegment.from_file(input_path)
+        
+        # Set the parameters and export to the desired output format
+        audio = audio.set_frame_rate(16000).set_channels(1).set_sample_width(2)  # 2 bytes per sample = pcm_s16le
+        audio.export(output_path, format="wav")  # Save the output as a WAV file
+
+        print(f"Converted {input_path} to {output_path} with 16000 Hz sample rate")
+
+        # Optionally, delete the original file if needed
+        os.remove(input_path)
+        print(f"Deleted original file: {input_path}")
+
+        return output_path
+    except Exception as e:
+        print(f"Error during conversion: {e}")
+        return None
+#     try:
+#         subprocess.run(
+#             ['ffmpeg', '-i', input_path, '-acodec', 'pcm_s16le', '-ar', '16000', '-ac', '1', output_path],
+#             check=True,
+#             stdout=subprocess.PIPE,
+#             stderr=subprocess.PIPE,
+#             shell=True  # Add shell=True to ensure Windows compatibility
+# )
+
+
+# Load the input audio file
+
 
 # def convert_to_16000hz(input_path, output_path):
 #     try:
@@ -56,14 +80,7 @@ def convert_to_16000hz(input_path, output_path):
         
    
 
-        print(f"Converted {input_path} to {output_path} with 16000 Hz sample rate")
-        print (input_path)
-        os.remove(input_path)  # Delete the original
-        
-        return output_path
-    except Exception as e:
-        print(f"Error during conversion: {e}")
-        return None
+      
 
 # Fetch files for display
 def get_files():
