@@ -1,22 +1,5 @@
 steps:
-  # Install FFmpeg and required dependencies in Cloud Build environment
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args:
-      - 'bash'
-      - '-c'
-      - |
-        apt-get update && apt-get install -y ffmpeg
-
-  # Install Python dependencies
-  - name: 'gcr.io/cloud-builders/python'
-    args:
-      - '-m'
-      - 'pip'
-      - 'install'
-      - '-r'
-      - 'requirements.txt'
-
-  # Build the Docker image using Cloud Build's Docker builder
+  # Build the Docker image using the Dockerfile
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
@@ -30,7 +13,7 @@ steps:
       - 'push'
       - 'gcr.io/$PROJECT_ID/speech-and-text-conversion-api2'
 
-  # Deploy the image to Cloud Run
+  # Deploy to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'run'
