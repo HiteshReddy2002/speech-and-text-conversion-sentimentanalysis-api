@@ -1,0 +1,9 @@
+Sentiment Analysis for converted_20250226-121821PM.txt:
+
+Original Text:
+hello potato fry is good
+
+Sentiment Score: 0.6000000238418579
+Sentiment Magnitude: 0.6000000238418579
+
+Overall Sentiment: Positive

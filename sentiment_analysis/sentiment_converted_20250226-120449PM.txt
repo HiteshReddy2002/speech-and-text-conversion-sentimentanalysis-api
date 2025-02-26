@@ -1,0 +1,9 @@
+Sentiment Analysis for converted_20250226-120449PM.txt:
+
+Original Text:
+potato fry
+
+Sentiment Score: 0.0
+Sentiment Magnitude: 0.0
+
+Overall Sentiment: Neutral
