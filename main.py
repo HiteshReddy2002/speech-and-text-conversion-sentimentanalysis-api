@@ -9,7 +9,6 @@ import wave
 from google.cloud import language_v1
 from datetime import datetime
 from pydub import AudioSegment
-import ffmpeg
 
 
 app = Flask(__name__)
@@ -33,23 +32,31 @@ def serve_tts_file(filename):
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-#Convert audio to LINEAR16 with 16kHz
-
-
-
+# Convert audio to LINEAR16 with 16kHz
+# def convert_to_16000hz(input_path, output_path):
+#     try:
+#         subprocess.run(
+#             ['ffmpeg', '-i', input_path, '-acodec', 'pcm_s16le', '-ar', '16000', '-ac', '1', output_path],
+#             check=True,
+#             stdout=subprocess.PIPE,
+#             stderr=subprocess.PIPE,
+#             shell=True  # Add shell=True to ensure Windows compatibility
+# )
 
 def convert_to_16000hz(input_path, output_path):
     try:
-        (
-            ffmpeg
-            .input(input_path)
-            .output(output_path, acodec='pcm_s16le', ar='16000', ac=1)
-            .run(overwrite_output=True)
-        )
-        print(f"Converted {input_path} to {output_path} with 16000 Hz sample rate")
-        return output_path
+        # Load the audio file
+        audio = AudioSegment.from_wav(input_path)
+
+        # Convert to 16kHz sample rate
+        audio = audio.set_frame_rate(16000)
+
+        # Export the audio to the output path
+        audio.export(output_path, format="wav")
+        
     except Exception as e:
-        print("Error:", e)
+        print(f"Error during conversion: {e}")
+
 
         print(f"Converted {input_path} to {output_path} with 16000 Hz sample rate")
         os.remove(input_path)  # Delete the original
