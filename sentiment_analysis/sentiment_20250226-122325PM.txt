@@ -1,9 +1,0 @@
-Sentiment Analysis for 20250226-122325PM.txt:
-
-Original Text:
-hellooo 
-
-Sentiment Score: 0.30000001192092896
-Sentiment Magnitude: 0.30000001192092896
-
-Overall Sentiment: Positive

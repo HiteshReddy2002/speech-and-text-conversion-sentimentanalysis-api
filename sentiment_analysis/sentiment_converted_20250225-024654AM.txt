@@ -1,9 +1,0 @@
-Sentiment Analysis for converted_20250225-024654AM.txt:
-
-Original Text:
-my friend how are you
-
-Sentiment Score: 0.10000000149011612
-Sentiment Magnitude: 0.10000000149011612
-
-Overall Sentiment: Neutral

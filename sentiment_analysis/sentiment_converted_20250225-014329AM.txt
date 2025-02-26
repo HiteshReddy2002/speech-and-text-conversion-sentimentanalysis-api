@@ -1,9 +1,0 @@
-Sentiment Analysis for converted_20250225-014329AM.txt:
-
-Original Text:
-
-
-Sentiment Score: 0.0
-Sentiment Magnitude: 0.0
-
-Overall Sentiment: Neutral
