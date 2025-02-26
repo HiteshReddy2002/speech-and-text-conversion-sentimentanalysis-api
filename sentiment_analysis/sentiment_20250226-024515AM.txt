@@ -1,0 +1,9 @@
+Sentiment Analysis for 20250226-024515AM.txt:
+
+Original Text:
+hey how are you doing
+
+Sentiment Score: 0.0
+Sentiment Magnitude: 0.0
+
+Overall Sentiment: Neutral
