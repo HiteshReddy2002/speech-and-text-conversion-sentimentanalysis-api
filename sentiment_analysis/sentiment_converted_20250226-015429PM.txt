@@ -1,9 +1,0 @@
-Sentiment Analysis for converted_20250226-015429PM.txt:
-
-Original Text:
-hey buddy how are you doing
-
-Sentiment Score: 0.0
-Sentiment Magnitude: 0.0
-
-Overall Sentiment: Neutral

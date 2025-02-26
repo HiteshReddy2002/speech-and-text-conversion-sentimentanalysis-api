@@ -54,11 +54,10 @@ def convert_to_16000hz(input_path, output_path):
 #         # Export the audio to the output path
 #         audio.export(output_path, format="wav")
         
-    except Exception as e:
-        print(f"Error during conversion: {e}")
-
+   
 
         print(f"Converted {input_path} to {output_path} with 16000 Hz sample rate")
+        print (input_path)
         os.remove(input_path)  # Delete the original
         
         return output_path
