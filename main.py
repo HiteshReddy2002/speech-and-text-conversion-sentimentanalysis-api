@@ -23,7 +23,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set your API key (ensure it's configured correctly)
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+genai.configure(api_key="AIzaSyD1hQZGSUccjECeQ4kj5gtvlxXv10T4gko")
 
 # Fetch files for display
 def get_files():
