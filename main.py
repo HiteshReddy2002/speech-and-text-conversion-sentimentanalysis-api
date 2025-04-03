@@ -43,7 +43,7 @@ def process_audio_with_llm(file_path):
     with io.open(file_path, 'rb') as audio_file:
         content = audio_file.read()
 
-    # Initialize the Gemini model (e.g., "gemini-2.0-flash")
+    
     model = genai.GenerativeModel('gemini-2.0-flash')
 
     try:
