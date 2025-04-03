@@ -1,9 +1,0 @@
-Sentiment Analysis for 20250226-030445PM.txt:
-
-Original Text:
-why are you here
-
-Sentiment Score: -0.5
-Sentiment Magnitude: 0.5
-
-Overall Sentiment: Negative
