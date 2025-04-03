@@ -8,6 +8,7 @@ import logging
 import base64
 
 # Initialize Flask app
+
 app = Flask(__name__)
 
 # Configure upload folder
