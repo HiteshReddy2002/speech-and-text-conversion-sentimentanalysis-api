@@ -2,80 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Recorder and Transcription</title>
+    <title>Book Talk Bot</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        td {
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #4CAF50;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        audio {
-            margin-top: 10px;
-            width: 100%;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 15px;
-        }
+        body { font-family: Arial; margin: 30px; }
+        h1, h2 { color: #4CAF50; }
+        button { padding: 10px 15px; margin: 10px 0; background: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        audio { width: 100%; margin-top: 10px; }
+        #timer { margin-left: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
+    <h1>Conversational Book Bot 📖🎤</h1>
 
-    <h1>Speech-to-Text and Sentiment Analysis</h1>
-    <h2>Record and Upload Audio</h2>
+    <h2>1. Upload a PDF Book</h2>
+    <form method="POST" action="/upload_pdf" enctype="multipart/form-data">
+        <input type="file" name="pdf_file" accept=".pdf" required>
+        <button type="submit">Upload PDF</button>
+    </form>
 
-    <!-- Record and Stop buttons -->
+    <h2>2. Ask a Question (Voice)</h2>
     <button id="record">Record</button>
     <button id="stop" disabled>Stop</button>
     <span id="timer">00:00</span>
 
-
-    <!-- Upload form -->
     <form id="uploadForm" method="POST" enctype="multipart/form-data" action="/upload">
         <input type="hidden" name="audio_data" id="audioData">
-        <!-- Dynamically filled with recorded audio data -->
     </form>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <hr>
-
-    <h2>Recorded Files</h2>
+    <h2>Available PDFs</h2>
     <ul>
         {% for file in files %}
-        <li>
-            <audio controls>
-                <source src="{{ url_for('uploaded_file', filename=file) }}" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio><br>
-            {{ file }}
-            <a href="{{ url_for('uploaded_file', filename=file.replace('.wav', '.txt')) }}">View Transcript and Sentiment</a>
-        </li>
+            {% if file.endswith('.pdf') %}
+            <li>{{ file }}</li>
+            {% endif %}
         {% endfor %}
     </ul>
 
+    <h2>Uploaded Audio Files</h2>
+    <ul>
+        {% for file in files %}
+            {% if file.endswith('_response.wav') %}
+            <li>
+                <strong>{{ file }}</strong><br>
+                <audio controls>
+                    <source src="{{ url_for('uploaded_file', filename=file) }}" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
