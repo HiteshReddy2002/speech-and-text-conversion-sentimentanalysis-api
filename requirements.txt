@@ -5,4 +5,4 @@ gunicorn==22.0.0
 google-generativeai==0.8.4
 pytesseract==0.3.8
 pdf2image==1.16.0
-PyMuPDF==1.19.6
+PyMuPDF==1.19.6 --only-binary :all:
