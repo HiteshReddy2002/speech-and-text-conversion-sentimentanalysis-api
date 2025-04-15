@@ -1,0 +1,1 @@
+The PDF is a test document demonstrating how different text formatting elements appear when converted to PDF.  It includes examples of bold, italic, and strikethrough text, as well as unordered and ordered lists, block quotes, and tables.  The goal is to make sure these elements render correctly in the PDF format.
