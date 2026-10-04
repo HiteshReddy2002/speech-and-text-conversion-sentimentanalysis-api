@@ -15,8 +15,14 @@ ALLOWED_EXTENSIONS = {'pdf', 'wav'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Configure Gemini API
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY", ""))
+# Configure Gemini API — load from environment variable (never hard-code keys)
+_GEMINI_KEY = os.environ.get("GEMINI_API_KEY")
+if not _GEMINI_KEY:
+    raise EnvironmentError(
+        "GEMINI_API_KEY environment variable is not set. "
+        "Copy .env.example to .env and add your key before running."
+    )
+genai.configure(api_key=_GEMINI_KEY)
 
 # Google TTS Client Setup
 tts_client = texttospeech.TextToSpeechClient()
