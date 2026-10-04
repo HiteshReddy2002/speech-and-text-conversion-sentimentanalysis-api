@@ -12,10 +12,20 @@ This guide deploys the Speech & Sentiment API demo to [Hugging Face Spaces](http
 
 ## Steps
 
-### 1. Create a new Space
+### 1. Authenticate with Hugging Face & Create Space
 
+Run the CLI login:
 ```bash
 huggingface-cli login
+```
+When prompted for your token:
+```text
+Token: <PASTE_YOUR_HUGGING_FACE_WRITE_TOKEN_HERE (hf_...)>
+```
+(Generate your token at https://huggingface.co/settings/tokens with Write permissions).
+
+Then create the Gradio Space:
+```bash
 huggingface-cli repo create speech-sentiment-demo --type space --space_sdk gradio
 ```
 
