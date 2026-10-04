@@ -1,1 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment & Credentials (NEVER commit secrets)
+.env
+*.env
+.env.*
+!*.example
+*_service_account*.json
+credentials*.json
+*.pem
+*.key
+secrets/
 **.json
+
+# Runtime uploads
+uploads/*
+!uploads/.gitkeep
