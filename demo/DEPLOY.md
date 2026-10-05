@@ -32,7 +32,7 @@ huggingface-cli repo create speech-sentiment-demo --type space --space_sdk gradi
 ### 2. Clone the Space repo
 
 ```bash
-git clone https://huggingface.co/spaces/<YOUR_HF_USERNAME>/speech-sentiment-demo
+git clone https://huggingface.co/spaces/hitesh125/speech-sentiment-demo
 cd speech-sentiment-demo
 ```
 
@@ -68,7 +68,7 @@ git push
 ### 6. Monitor
 
 - Build logs are visible in the Space's **Logs** tab.
-- The Space URL will be: `https://huggingface.co/spaces/<YOUR_HF_USERNAME>/speech-sentiment-demo`
+- The Space URL will be: `https://huggingface.co/spaces/hitesh125/speech-sentiment-demo`
 
 ---
 
