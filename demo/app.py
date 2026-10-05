@@ -70,12 +70,11 @@ def process_pdf_and_question(pdf_file, text_question: str):
         else:
             raw_text = extract_text_from_pdf(pdf_path)
             summary = summarize_book(raw_text)
-            # Use Gemini to answer the text question
             import google.generativeai as genai
-            model = genai.GenerativeModel("gemini-1.5-pro-latest")
+            model_name = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
+            model = genai.GenerativeModel(model_name)
             resp = model.generate_content([
-                {"text": f"Based on the following summary, answer: {text_question}"},
-                {"text": summary},
+                {"text": f"Based on the following document, answer the question accurately with exact metrics and bounds:\n\n{raw_text[:50000]}\n\nQuestion: {text_question}"}
             ])
             answer = resp.text
     except Exception as e:
