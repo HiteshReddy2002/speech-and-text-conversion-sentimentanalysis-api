@@ -68,7 +68,8 @@ git push
 ### 6. Monitor
 
 - Build logs are visible in the Space's **Logs** tab.
-- The Space URL will be: `https://huggingface.co/spaces/hitesh125/speech-sentiment-demo`
+- The live Space URL is: `https://huggingface.co/spaces/hitesh125/mini-chatbot` (Embed domain: `https://hitesh125-mini-chatbot.hf.space`)
+- Default repository target: `https://huggingface.co/spaces/hitesh125/speech-sentiment-demo`
 
 ---
 
