@@ -15,6 +15,9 @@ ALLOWED_EXTENSIONS = {'pdf', 'wav'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Configure Gemini API — load from environment variable (never hard-code keys)
 _GEMINI_KEY = os.environ.get("GEMINI_API_KEY")
 if not _GEMINI_KEY:
@@ -24,8 +27,12 @@ if not _GEMINI_KEY:
     )
 genai.configure(api_key=_GEMINI_KEY)
 
-# Google TTS Client Setup
-tts_client = texttospeech.TextToSpeechClient()
+# Google TTS Client Setup (graceful fallback if GCP credentials are not configured)
+try:
+    tts_client = texttospeech.TextToSpeechClient()
+except Exception as e:
+    tts_client = None
+    logging.warning(f"Google Cloud Text-to-Speech client could not be initialized: {e}")
 
 logging.basicConfig(level=logging.INFO)
 
@@ -53,9 +60,11 @@ def extract_text_from_pdf(pdf_path):
     logging.info(f"Final extracted text length: {len(text)}")
     return text
 
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
+
 def summarize_book(book_text):
     logging.info("Summarizing the book...")
-    model = genai.GenerativeModel('gemini-1.5-pro-latest')
+    model = genai.GenerativeModel(GEMINI_MODEL)
     if not book_text.strip():
         logging.warning("Book text is empty.")
         return "No content extracted from the PDF to summarize."
@@ -75,7 +84,7 @@ def process_query_with_llm(book_summary, audio_path):
     You are a helpful assistant. Use the summary of the uploaded book and answer the user's audio question.
     """
 
-    model = genai.GenerativeModel('gemini-1.5-pro-latest')
+    model = genai.GenerativeModel(GEMINI_MODEL)
     response = model.generate_content([
         {"text": prompt},
         {"text": book_summary},
@@ -91,6 +100,8 @@ def process_query_with_llm(book_summary, audio_path):
     return response.text
 
 def text_to_speech(response_text):
+    if tts_client is None:
+        raise EnvironmentError("Google Cloud Text-to-Speech credentials are not configured.")
     input_text = texttospeech.SynthesisInput(text=response_text)
     voice = texttospeech.VoiceSelectionParams(
         language_code="en-US",

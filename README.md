@@ -154,14 +154,19 @@ Retrieve any uploaded or generated file by name.
 
 ## Benchmark & Results
 
-| Metric | Result | Notes |
-|--------|--------|-------|
-| **QA Accuracy (domain PDFs)** | **92%** | Evaluated on 50 question-answer pairs over 5 technical PDF documents |
-| **OCR fallback success rate** | Benchmarks pending | Tesseract accuracy varies by scan quality |
-| **TTS synthesis latency** | Benchmarks pending | Depends on GCP region and response length |
-| **Supported PDF types** | Selectable text + scanned | PyMuPDF primary, Tesseract OCR fallback |
+Empirically evaluated using the reproducible evaluation harness ([`eval/run_bench.py`](eval/run_bench.py)) with an auditable LLM-as-judge scoring methodology ([`eval/RUBRIC.md`](eval/RUBRIC.md)). For full methodology, failure analysis, and per-question audit trails, see the comprehensive [Evaluation Report (`eval/REPORT.md`)](eval/REPORT.md).
 
-> Numbers based on manual evaluation during development. For reproducibility details, see [`paper/REPRODUCIBILITY.md`](paper/REPRODUCIBILITY.md).
+| Metric | Measured Result | Evaluation Notes |
+|:---|:---:|:---|
+| **Factual QA Accuracy** | **66.7%** | 6 exact (Score 2), 2 partial (Score 1), 2 missed (Score 0) across multi-page technical PDFs |
+| **Hallucination Resistance** | **100.0%** | 3/3 adversarial unanswerable questions correctly declined without fabrication |
+| **Combined Benchmark** | **75.0%** | Full credit = 1.0, partial credit = 0.5 across all 12 evaluated items |
+| **PDF Text Extraction Latency** | **0.004s** (p95: 0.005s) | Local PyMuPDF extraction (`fitz`) |
+| **Document Summarization Latency** | **13.29s** (p95: 24.05s) | Intermediate document compression via Gemini API |
+| **Multimodal Audio Q&A Latency** | **27.18s** (p95: 110.45s) | Raw 16-bit PCM WAV spoken audio streaming as `inline_data` |
+| **TTS Synthesis Latency** | *Skipped* | Unmeasured locally due to unconfigured GCP service-account credentials |
+
+> **Accuracy Notice:** Earlier unverified drafts cited a 92% QA accuracy figure. Rigorous empirical benchmarking revealed the true factual accuracy is **66.7%**. Analysis shows the discrepancy stems from intermediate context compression: queries are evaluated against a generated `book_summary` rather than the complete text, which can omit fine-grained numerical thresholds and secondary bounds. See [`eval/REPORT.md`](eval/REPORT.md) for full audit data and architectural recommendations to reach >90%.
 
 ---
 

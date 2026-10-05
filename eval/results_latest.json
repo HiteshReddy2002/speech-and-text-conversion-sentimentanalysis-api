@@ -1,0 +1,273 @@
+{
+  "timestamp": "20261004_200955",
+  "model_used": "gemini-3.1-flash-lite",
+  "total_questions": 12,
+  "factual_questions": 9,
+  "adversarial_questions": 3,
+  "metrics": {
+    "overall_benchmark_pct": 75.0,
+    "factual_accuracy_pct": 66.7,
+    "hallucination_resistance_pct": 100.0,
+    "raw_counts": {
+      "score_2": 8,
+      "score_1": 2,
+      "score_0": 2
+    }
+  },
+  "per_pdf_stats": {
+    "clinical_cardiology_trial_protocol.pdf": {
+      "factual_accuracy_pct": 33.3,
+      "factual_counts": {
+        "score_2": 1,
+        "score_1": 0,
+        "score_0": 2,
+        "total": 3
+      },
+      "hallucination_resistance_pct": 100.0,
+      "adversarial_counts": {
+        "score_2": 1,
+        "score_1": 0,
+        "score_0": 0,
+        "total": 1
+      }
+    },
+    "cloud_data_lakehouse_architecture.pdf": {
+      "factual_accuracy_pct": 83.3,
+      "factual_counts": {
+        "score_2": 2,
+        "score_1": 1,
+        "score_0": 0,
+        "total": 3
+      },
+      "hallucination_resistance_pct": 100.0,
+      "adversarial_counts": {
+        "score_2": 1,
+        "score_1": 0,
+        "score_0": 0,
+        "total": 1
+      }
+    },
+    "fintech_payment_security_spec.pdf": {
+      "factual_accuracy_pct": 83.3,
+      "factual_counts": {
+        "score_2": 2,
+        "score_1": 1,
+        "score_0": 0,
+        "total": 3
+      },
+      "hallucination_resistance_pct": 100.0,
+      "adversarial_counts": {
+        "score_2": 1,
+        "score_1": 0,
+        "score_0": 0,
+        "total": 1
+      }
+    }
+  },
+  "latency_stats": {
+    "pdf_extraction": {
+      "mean": 0.004,
+      "p95": 0.005,
+      "min": 0.003,
+      "max": 0.005
+    },
+    "summarization": {
+      "mean": 13.289,
+      "p95": 24.049,
+      "min": 1.354,
+      "max": 24.049
+    },
+    "audio_qa_inference": {
+      "mean": 27.179,
+      "p95": 110.454,
+      "min": 4.68,
+      "max": 110.454
+    },
+    "text_to_speech": {
+      "status": "SKIPPED",
+      "reason": "Google Cloud Text-to-Speech credentials not configured"
+    }
+  },
+  "results": [
+    {
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_id": "Q-CLIN-01",
+      "question_type": "factual",
+      "question": "What is the investigational product name and code in the trial?",
+      "expected_answer": "Cardiovastin (CV-882)",
+      "page_hint": "Page 1",
+      "model_answer": "The investigational product in this trial is Cardiovastin, also identified by the code CV-882.",
+      "latency_extract_sec": 0.005,
+      "latency_summary_sec": 1.354,
+      "latency_audio_qa_sec": 4.68,
+      "score": 2,
+      "evidence_span": "The investigational product in this trial is Cardiovastin, also identified by the code CV-882.",
+      "justification": "The model accurately identifies both the investigational product name and the trial code."
+    },
+    {
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_id": "Q-CLIN-03",
+      "question_type": "factual",
+      "question": "What resting systolic blood pressure range is required at screening?",
+      "expected_answer": "Between 140 mmHg and 179 mmHg",
+      "page_hint": "Page 1",
+      "model_answer": "To be eligible for this study, adults must have Stage 2 essential hypertension. This clinical category corresponds to a resting systolic blood pressure of 140 mmHg or higher.",
+      "latency_extract_sec": 0.005,
+      "latency_summary_sec": 1.354,
+      "latency_audio_qa_sec": 21.097,
+      "score": 0,
+      "evidence_span": "This clinical category corresponds to a resting systolic blood pressure of 140 mmHg or higher.",
+      "justification": "The model failed to state the upper bound (179 mmHg) of the required range, providing an incomplete definition."
+    },
+    {
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_id": "Q-CLIN-06",
+      "question_type": "factual",
+      "question": "What threshold of Grade 3 hypotension triggers the predefined study halting criteria?",
+      "expected_answer": "Exceeding 2.5% in any active treatment arm",
+      "page_hint": "Page 2",
+      "model_answer": "Based on the study details provided, the summary does not specify the exact blood pressure threshold for the halting criteria. It only notes that the independent board has established halting criteria for severe hypotension.",
+      "latency_extract_sec": 0.005,
+      "latency_summary_sec": 1.354,
+      "latency_audio_qa_sec": 110.454,
+      "score": 0,
+      "evidence_span": "the summary does not specify the exact blood pressure threshold for the halting criteria.",
+      "justification": "The model failed to retrieve the factual threshold mentioned in the document and incorrectly claimed it was not specified."
+    },
+    {
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_id": "Q-CLIN-ADV-01",
+      "question_type": "adversarial",
+      "question": "What is the recommended pediatric dosage for Cardiovastin in children under 12 years old?",
+      "expected_answer": "The document does not mention pediatric dosage; the trial is restricted to adults aged 35 to 75.",
+      "page_hint": "None (unanswerable)",
+      "model_answer": "The provided study is focused on adults with Stage 2 essential hypertension and does not include information regarding pediatric use or dosage for children under 12 years old.",
+      "latency_extract_sec": 0.005,
+      "latency_summary_sec": 1.354,
+      "latency_audio_qa_sec": 5.131,
+      "score": 2,
+      "evidence_span": "The provided study is focused on adults with Stage 2 essential hypertension and does not include information regarding pediatric use or dosage for children under 12 years old.",
+      "justification": "The model correctly resisted the adversarial question by noting the document's focus on adults."
+    },
+    {
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_id": "Q-DLH-01",
+      "question_type": "factual",
+      "question": "What table format is used for all transformed tables in the Gold analytical layer?",
+      "expected_answer": "Apache Iceberg v2",
+      "page_hint": "Page 2",
+      "model_answer": "The DLH-SPEC-2026-V3 engineering standard uses Apache Iceberg tables.",
+      "latency_extract_sec": 0.004,
+      "latency_summary_sec": 24.049,
+      "latency_audio_qa_sec": 9.394,
+      "score": 1,
+      "evidence_span": "the DLH-SPEC-2026-V3 engineering standard uses Apache Iceberg tables.",
+      "justification": "The model correctly identifies Apache Iceberg but omits the 'v2' specification required for a perfect score."
+    },
+    {
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_id": "Q-DLH-02",
+      "question_type": "factual",
+      "question": "What is the sustained ingestion SLA for raw transactional events captured from Kafka topics?",
+      "expected_answer": "Under 500 milliseconds (p95)",
+      "page_hint": "Page 1",
+      "model_answer": "According to the DLH-SPEC-2026-V3 engineering standard, the ingestion process uses Kafka-based streaming with a latency of less than 500 milliseconds for raw transactional events.",
+      "latency_extract_sec": 0.004,
+      "latency_summary_sec": 24.049,
+      "latency_audio_qa_sec": 21.549,
+      "score": 2,
+      "evidence_span": "the ingestion process uses Kafka-based streaming with a latency of less than 500 milliseconds for raw transactional events.",
+      "justification": "The model correctly states the SLA metric and identifies the underlying technology."
+    },
+    {
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_id": "Q-DLH-06",
+      "question_type": "factual",
+      "question": "How often are Customer-Managed Encryption Keys (CMEK) rotated?",
+      "expected_answer": "Automatically every 90 days",
+      "page_hint": "Page 2",
+      "model_answer": "According to the DLH-SPEC-2026-V3 engineering standard, customer-managed encryption keys (CMEK) are rotated every 90 days.",
+      "latency_extract_sec": 0.004,
+      "latency_summary_sec": 24.049,
+      "latency_audio_qa_sec": 32.489,
+      "score": 2,
+      "evidence_span": "customer-managed encryption keys (CMEK) are rotated every 90 days.",
+      "justification": "The model accurately provides the rotation frequency."
+    },
+    {
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_id": "Q-DLH-ADV-01",
+      "question_type": "adversarial",
+      "question": "What is the annual cloud infrastructure budget allocated for the Lakehouse cluster?",
+      "expected_answer": "The document does not mention an annual cloud infrastructure budget.",
+      "page_hint": "None (unanswerable)",
+      "model_answer": "The provided text for the DLH-SPEC-2026-V3 engineering standard does not mention a specific dollar amount for the annual cloud infrastructure budget.",
+      "latency_extract_sec": 0.004,
+      "latency_summary_sec": 24.049,
+      "latency_audio_qa_sec": 6.459,
+      "score": 2,
+      "evidence_span": "The provided text for the DLH-SPEC-2026-V3 engineering standard does not mention a specific dollar amount for the annual cloud infrastructure budget.",
+      "justification": "The model correctly resisted the adversarial question by confirming the information is absent."
+    },
+    {
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_id": "Q-FIN-01",
+      "question_type": "factual",
+      "question": "Which version of TLS is required for payment authorization requests?",
+      "expected_answer": "TLS version 1.3",
+      "page_hint": "Page 1",
+      "model_answer": "According to the FPS-SEC-809 standard, TLS 1.3 encryption is required for all API traffic, including payment authorization requests.",
+      "latency_extract_sec": 0.003,
+      "latency_summary_sec": 14.464,
+      "latency_audio_qa_sec": 29.383,
+      "score": 2,
+      "evidence_span": "TLS 1.3 encryption is required for all API traffic, including payment authorization requests.",
+      "justification": "The model correctly identifies the required TLS version."
+    },
+    {
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_id": "Q-FIN-03",
+      "question_type": "factual",
+      "question": "What is the maximum permitted timestamp skew before a request is rejected with HTTP 401?",
+      "expected_answer": "300 seconds (5 minutes)",
+      "page_hint": "Page 1",
+      "model_answer": "Based on the document provided, the standard specifies a 5-minute window for API request signatures to prevent replay attacks. The document does not explicitly state a 401 error related to a timestamp skew, but it does mandate that all API traffic must adhere to the 5-minute window.",
+      "latency_extract_sec": 0.003,
+      "latency_summary_sec": 14.464,
+      "latency_audio_qa_sec": 6.179,
+      "score": 1,
+      "evidence_span": "the standard specifies a 5-minute window",
+      "justification": "The model identifies the correct time duration but includes unnecessary hedging regarding the HTTP status code, which was not requested."
+    },
+    {
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_id": "Q-FIN-06",
+      "question_type": "factual",
+      "question": "How many calendar days do merchants have to submit rebuttal documentation for a chargeback?",
+      "expected_answer": "Exactly 14 calendar days from the notification date",
+      "page_hint": "Page 2",
+      "model_answer": "Under FPS-SEC-809, merchants have 14 days to submit evidence (rebuttal documentation) for a chargeback.",
+      "latency_extract_sec": 0.003,
+      "latency_summary_sec": 14.464,
+      "latency_audio_qa_sec": 19.302,
+      "score": 2,
+      "evidence_span": "merchants have 14 days to submit evidence (rebuttal documentation) for a chargeback.",
+      "justification": "The model accurately states the submission timeline."
+    },
+    {
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_id": "Q-FIN-ADV-01",
+      "question_type": "adversarial",
+      "question": "What is the interchange transaction fee charged for Mastercard debit cards?",
+      "expected_answer": "The document does not mention interchange transaction fees.",
+      "page_hint": "None (unanswerable)",
+      "model_answer": "The provided document (FPS-SEC-809) outlines security protocols, fraud prevention, and dispute resolution timelines, but it does not contain information regarding transaction fees for Mastercard debit cards.",
+      "latency_extract_sec": 0.003,
+      "latency_summary_sec": 14.464,
+      "latency_audio_qa_sec": 60.027,
+      "score": 2,
+      "evidence_span": "it does not contain information regarding transaction fees for Mastercard debit cards.",
+      "justification": "The model correctly resisted the adversarial question by stating the document lacks information on transaction fees."
+    }
+  ]
+}

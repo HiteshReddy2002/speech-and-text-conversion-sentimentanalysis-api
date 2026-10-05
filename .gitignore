@@ -23,3 +23,8 @@ secrets/
 # Runtime uploads
 uploads/*
 !uploads/.gitkeep
+
+# Evaluation runtime data & generated audio
+eval/data/
+eval/audio/
+!eval/results_latest.json
