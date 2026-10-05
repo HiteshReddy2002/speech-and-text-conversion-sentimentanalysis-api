@@ -1,0 +1,11 @@
+# Pinned reproduction environment for Speech & Sentiment paper experiments
+Flask==3.0.3
+google-cloud-speech==2.27.0
+google-cloud-texttospeech==2.17.2
+gunicorn==22.0.0
+google-generativeai==0.8.4
+pytesseract==0.3.13
+pdf2image==1.17.0
+PyMuPDF==1.25.5
+numpy==1.26.4
+scipy==1.13.1
