@@ -7,10 +7,20 @@ from pathlib import Path
 from flask import Flask, render_template, request, send_from_directory, jsonify
 from werkzeug.utils import secure_filename
 import fitz  # PyMuPDF
-from pdf2image import convert_from_path
-import pytesseract
+try:
+    from pdf2image import convert_from_path
+    import pytesseract
+except ImportError:
+    convert_from_path = None
+    pytesseract = None
+
 import google.generativeai as genai
-from google.cloud import texttospeech
+
+try:
+    from google.cloud import texttospeech
+except ImportError:
+    texttospeech = None
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,23 +35,21 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 
 # ── Gemini API Configuration ──────────────────────────────────────────────────
 _GEMINI_KEY = os.environ.get("GEMINI_API_KEY")
-if not _GEMINI_KEY:
-    raise EnvironmentError(
-        "GEMINI_API_KEY environment variable is not set. "
-        "Copy .env.example to .env and add your key before running."
-    )
-genai.configure(api_key=_GEMINI_KEY)
+if _GEMINI_KEY:
+    genai.configure(api_key=_GEMINI_KEY)
 
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
 MAX_DOCUMENT_CHARS = int(os.environ.get("MAX_DOCUMENT_CHARS", 50000))
 
 # ── Google Cloud TTS Client Setup (graceful degradation) ───────────────────────
-try:
-    tts_client = texttospeech.TextToSpeechClient()
-    logging.info("Google Cloud Text-to-Speech client initialized successfully.")
-except Exception as e:
-    tts_client = None
-    logging.warning(f"Google Cloud Text-to-Speech client unconfigured or unavailable: {e}")
+tts_client = None
+if texttospeech is not None:
+    try:
+        tts_client = texttospeech.TextToSpeechClient()
+        logging.info("Google Cloud Text-to-Speech client initialized successfully.")
+    except Exception as e:
+        tts_client = None
+        logging.warning(f"Google Cloud Text-to-Speech client unconfigured or unavailable: {e}")
 
 
 def allowed_file(filename, exts):
@@ -98,6 +106,14 @@ def summarize_book(book_text):
         logging.warning("Book text is empty.")
         return "No content extracted from the PDF to summarize."
 
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise EnvironmentError(
+            "GEMINI_API_KEY environment variable is not set. "
+            "Please configure your key before running."
+        )
+    genai.configure(api_key=key)
+
     model = genai.GenerativeModel(GEMINI_MODEL)
     truncated_text = book_text[:MAX_DOCUMENT_CHARS]
     prompt = (
@@ -116,6 +132,14 @@ def process_query_with_llm(document_context, audio_path, book_summary=None):
     Returns: (answer_text: str, sentiment_dict: dict)
     """
     logging.info(f"Processing audio query: {audio_path}")
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise EnvironmentError(
+            "GEMINI_API_KEY environment variable is not set. "
+            "Please configure your key before running."
+        )
+    genai.configure(api_key=key)
+
     with io.open(audio_path, 'rb') as audio_file:
         audio_data = audio_file.read()
 

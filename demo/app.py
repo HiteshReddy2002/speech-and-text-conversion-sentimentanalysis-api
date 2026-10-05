@@ -11,8 +11,9 @@ import sys
 import tempfile
 import pathlib
 
-# Allow imports from parent directory
+# Allow imports from parent directory or current directory
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import gradio as gr
 
@@ -102,7 +103,7 @@ def analyze_sentiment(text: str) -> str:
 
 MODE_BADGE = "🔴 MOCK MODE (no API key)" if MOCK_MODE else "🟢 LIVE (Gemini connected)"
 
-with gr.Blocks(title="Speech & Sentiment API Demo", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="Speech & Sentiment API Demo") as demo:
     gr.Markdown(f"""
     # 🎙️ Speech-to-Text & Sentiment Analysis API
     **Demo** | {MODE_BADGE}
@@ -135,8 +136,12 @@ with gr.Blocks(title="Speech & Sentiment API Demo", theme=gr.themes.Soft()) as d
     )
 
     gr.Examples(
-        examples=[["", "What is the main conclusion of this document?"]],
-        inputs=[pdf_input, question_input],
+        examples=[
+            ["What is the main conclusion of this document?"],
+            ["What are the key technical specifications and numerical thresholds?"],
+            ["Summarize the executive takeaways."],
+        ],
+        inputs=[question_input],
     )
 
 
