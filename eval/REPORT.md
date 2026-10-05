@@ -13,7 +13,7 @@
 This report establishes the first reproducible, transparent empirical benchmark for the `speech-and-text-conversion-sentimentanalysis-api` repository. Prior README claims asserted an unverified **"92% accuracy"**. 
 
 Our evaluation demonstrates that **the 92% accuracy claim does NOT hold up under rigorous testing**:
-- **Factual Accuracy:** **66.7%** (6/9 exact full credit, 2/9 partial credit, 2/9 missed/incomplete).
+- **Factual Accuracy:** **66.7%** (5/9 exact full credit, 2/9 partial credit, 2/9 missed/incomplete).
 - **Hallucination Resistance:** **100.0%** (3/3 unanswerable/adversarial questions correctly resisted without fabricating facts).
 - **Combined Overall Benchmark:** **75.0%**.
 - **End-to-End Latency:** Mean audio query inference was **27.18s** (p95: **110.45s**), with initial document summarization averaging **13.29s** (p95: **24.05s**) and local PyMuPDF extraction taking **0.004s**.
@@ -50,6 +50,21 @@ Adhering to [eval/RUBRIC.md](file:///C:/Users/hites/.gemini/antigravity-ide/scra
 
 All raw outputs, per-stage timestamps, and judge justification spans are preserved in `eval/results_latest.json`.
 
+### 2.4 Explicit Scoring Formulas
+
+Each item is evaluated on a 3-point scale ($S \in \{0, 1, 2\}$) with a maximum of 2 points per item:
+
+- **Factual Accuracy Formula:**
+  $$\text{Factual Accuracy} = \frac{\sum_{i=1}^{N_{\text{factual}}} S_i}{2 \times N_{\text{factual}}} = \frac{(5 \times 2) + (2 \times 1) + (2 \times 0)}{2 \times 9} = \frac{10 + 2 + 0}{18} = \frac{12}{18} \approx 66.7\%$$
+  *(5/9 items scored 2, 2/9 items scored 1, 2/9 items scored 0)*
+
+- **Hallucination Resistance Formula:**
+  $$\text{Hallucination Resistance} = \frac{\sum_{j=1}^{N_{\text{adversarial}}} S_j}{2 \times N_{\text{adversarial}}} = \frac{(3 \times 2) + (0 \times 1) + (0 \times 0)}{2 \times 3} = \frac{6}{6} = 100.0\%$$
+  *(3/3 unanswerable items scored 2 by properly declining or identifying missing context)*
+
+- **Combined Overall Benchmark Formula:**
+  $$\text{Combined Benchmark} = \frac{\sum_{k=1}^{N_{\text{total}}} S_k}{2 \times N_{\text{total}}} = \frac{12 + 6}{18 + 6} = \frac{18}{24} = 75.0\%$$
+
 ---
 
 ## 3. Benchmark Results
@@ -58,7 +73,7 @@ All raw outputs, per-stage timestamps, and judge justification spans are preserv
 
 | Metric | Score / Rate | Breakdown | Status |
 |:---|:---:|:---|:---:|
-| **Factual Accuracy** | **66.7%** | 6 exact (Score 2), 2 partial (Score 1), 2 missed (Score 0) | **Refutes 92% claim** |
+| **Factual Accuracy** | **66.7%** | 5/9 exact (Score 2), 2/9 partial (Score 1), 2/9 missed (Score 0) | **Refutes 92% claim** |
 | **Hallucination Resistance** | **100.0%** | 3 resisted (Score 2), 0 hedged (Score 1), 0 hallucinated (Score 0) | **Excellent** |
 | **Combined Benchmark** | **75.0%** | 8 Full Credit, 2 Partial Credit, 2 No Credit (Total 18/24 pts) | **Realistic baseline** |
 

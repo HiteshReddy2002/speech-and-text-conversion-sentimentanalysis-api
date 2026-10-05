@@ -158,7 +158,8 @@ Empirically evaluated using the reproducible evaluation harness ([`eval/run_benc
 
 | Metric | Measured Result | Evaluation Notes |
 |:---|:---:|:---|
-| **Factual QA Accuracy** | **66.7%** | 6 exact (Score 2), 2 partial (Score 1), 2 missed (Score 0) across multi-page technical PDFs |
+| **Model Under Test** | `gemini-3.1-flash-lite` | Active Google AI Studio multimodal endpoint |
+| **Factual QA Accuracy** | **66.7%** | 5/9 exact (Score 2), 2/9 partial (Score 1), 2/9 missed (Score 0) across multi-page technical PDFs |
 | **Hallucination Resistance** | **100.0%** | 3/3 adversarial unanswerable questions correctly declined without fabrication |
 | **Combined Benchmark** | **75.0%** | Full credit = 1.0, partial credit = 0.5 across all 12 evaluated items |
 | **PDF Text Extraction Latency** | **0.004s** (p95: 0.005s) | Local PyMuPDF extraction (`fitz`) |
@@ -166,7 +167,19 @@ Empirically evaluated using the reproducible evaluation harness ([`eval/run_benc
 | **Multimodal Audio Q&A Latency** | **27.18s** (p95: 110.45s) | Raw 16-bit PCM WAV spoken audio streaming as `inline_data` |
 | **TTS Synthesis Latency** | *Skipped* | Unmeasured locally due to unconfigured GCP service-account credentials |
 
+> **Model Caveat:** Benchmarked using `gemini-3.1-flash-lite` (the active multimodal Gemini endpoint; legacy `gemini-1.5-pro-latest` has been retired by Google AI Studio). Inference latency and accuracy characteristics will vary depending on the specific Gemini model tier (`gemini-2.5-flash`, `gemini-1.5-pro`), API tier quotas, network round-trip time, and input audio length.
+
 > **Accuracy Notice:** Earlier unverified drafts cited a 92% QA accuracy figure. Rigorous empirical benchmarking revealed the true factual accuracy is **66.7%**. Analysis shows the discrepancy stems from intermediate context compression: queries are evaluated against a generated `book_summary` rather than the complete text, which can omit fine-grained numerical thresholds and secondary bounds. See [`eval/REPORT.md`](eval/REPORT.md) for full audit data and architectural recommendations to reach >90%.
+
+### Scoring Methodology & Mathematical Formulas
+
+Scored on a standard 3-point rubric ([`eval/RUBRIC.md`](eval/RUBRIC.md)) where Full Credit (Score 2) = 2 pts, Partial Credit (Score 1) = 1 pt, and No Credit (Score 0) = 0 pts:
+
+$$\text{Factual Accuracy} = \frac{\sum S_{\text{factual}}}{2 \times N_{\text{factual}}} = \frac{(5 \times 2) + (2 \times 1) + (2 \times 0)}{2 \times 9} = \frac{12}{18} \approx 66.7\%$$
+
+$$\text{Hallucination Resistance} = \frac{\sum S_{\text{adversarial}}}{2 \times N_{\text{adversarial}}} = \frac{(3 \times 2) + (0 \times 1) + (0 \times 0)}{2 \times 3} = \frac{6}{6} = 100.0\%$$
+
+$$\text{Combined Benchmark} = \frac{\sum S_{\text{total}}}{2 \times N_{\text{total}}} = \frac{12 + 6}{18 + 6} = \frac{18}{24} = 75.0\%$$
 
 ---
 
