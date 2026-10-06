@@ -1,0 +1,1978 @@
+{
+  "timestamp": "20261006_144318",
+  "model_used": "gemini-3.1-flash-lite",
+  "whisper_model": "base",
+  "whisper_device": "cpu",
+  "dataset_file": "dataset.csv",
+  "total_questions": 30,
+  "factual_questions": 21,
+  "adversarial_questions": 9,
+  "summary_metrics": {
+    "native": {
+      "factual_accuracy_pct": 100.0,
+      "factual_points": 42,
+      "factual_max": 42,
+      "hallucination_resistance_pct": 100.0,
+      "adversarial_points": 18,
+      "adversarial_max": 18,
+      "abstention_rate_pct": 100.0,
+      "abstention_count": 9,
+      "abstention_max": 9,
+      "overall_benchmark_pct": 100.0,
+      "total_points": 60,
+      "total_max": 60,
+      "score_counts": {
+        "score_2": 30,
+        "score_1": 0,
+        "score_0": 0
+      },
+      "latencies": {
+        "stt": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "llm": {
+          "mean": 33.45,
+          "p95": 71.633,
+          "min": 5.127,
+          "max": 316.762
+        },
+        "tts": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "status": "SKIPPED"
+        },
+        "total": {
+          "mean": 33.45,
+          "p95": 71.633,
+          "min": 5.127,
+          "max": 316.762
+        }
+      },
+      "tokens": {
+        "prompt_tokens": 26907,
+        "candidates_tokens": 2520,
+        "total_tokens": 29427
+      },
+      "estimated_api_cost_usd": 0.01984,
+      "actual_charged_cost_usd": 0.0
+    },
+    "cascade": {
+      "factual_accuracy_pct": 100.0,
+      "factual_points": 42,
+      "factual_max": 42,
+      "hallucination_resistance_pct": 100.0,
+      "adversarial_points": 18,
+      "adversarial_max": 18,
+      "abstention_rate_pct": 100.0,
+      "abstention_count": 9,
+      "abstention_max": 9,
+      "overall_benchmark_pct": 100.0,
+      "total_points": 60,
+      "total_max": 60,
+      "score_counts": {
+        "score_2": 30,
+        "score_1": 0,
+        "score_0": 0
+      },
+      "latencies": {
+        "stt": {
+          "mean": 0.409,
+          "p95": 0.582,
+          "min": 0.331,
+          "max": 0.65
+        },
+        "llm": {
+          "mean": 11.727,
+          "p95": 24.606,
+          "min": 3.037,
+          "max": 61.493
+        },
+        "tts": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "status": "SKIPPED"
+        },
+        "total": {
+          "mean": 12.136,
+          "p95": 24.969,
+          "min": 3.382,
+          "max": 61.836
+        }
+      },
+      "tokens": {
+        "prompt_tokens": 20448,
+        "candidates_tokens": 873,
+        "total_tokens": 21321
+      },
+      "estimated_api_cost_usd": 0.00239,
+      "actual_charged_cost_usd": 0.0
+    },
+    "deltas": {
+      "accuracy_delta_pct": 0.0,
+      "hallucination_resistance_delta_pct": 0.0,
+      "abstention_rate_delta_pct": 0.0,
+      "overall_benchmark_delta_pct": 0.0,
+      "mean_latency_delta_sec": -21.314,
+      "cost_delta_usd": -0.01745
+    }
+  },
+  "per_pdf_stats": {
+    "clinical_cardiology_trial_protocol.pdf": {
+      "total_questions": 10,
+      "native": {
+        "factual_acc_pct": 100.0,
+        "halluc_res_pct": 100.0,
+        "total_pts": 20,
+        "total_max": 20,
+        "overall_pct": 100.0
+      },
+      "cascade": {
+        "factual_acc_pct": 100.0,
+        "halluc_res_pct": 100.0,
+        "total_pts": 20,
+        "total_max": 20,
+        "overall_pct": 100.0
+      }
+    },
+    "cloud_data_lakehouse_architecture.pdf": {
+      "total_questions": 10,
+      "native": {
+        "factual_acc_pct": 100.0,
+        "halluc_res_pct": 100.0,
+        "total_pts": 20,
+        "total_max": 20,
+        "overall_pct": 100.0
+      },
+      "cascade": {
+        "factual_acc_pct": 100.0,
+        "halluc_res_pct": 100.0,
+        "total_pts": 20,
+        "total_max": 20,
+        "overall_pct": 100.0
+      }
+    },
+    "fintech_payment_security_spec.pdf": {
+      "total_questions": 10,
+      "native": {
+        "factual_acc_pct": 100.0,
+        "halluc_res_pct": 100.0,
+        "total_pts": 20,
+        "total_max": 20,
+        "overall_pct": 100.0
+      },
+      "cascade": {
+        "factual_acc_pct": 100.0,
+        "halluc_res_pct": 100.0,
+        "total_pts": 20,
+        "total_max": 20,
+        "overall_pct": 100.0
+      }
+    }
+  },
+  "total_api_calls_made": 49,
+  "itemized_results": [
+    {
+      "question_id": "Q-DLH-01",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "factual",
+      "question": "What table format is used for all transformed tables in the Gold analytical layer?",
+      "expected_answer": "Apache Iceberg v2",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-01.wav",
+      "native": {
+        "answer": "All transformed tables in the Gold analytical layer are formatted as Apache Iceberg v2 tables.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 15.228,
+          "tts": 0.0,
+          "total": 15.228
+        },
+        "tokens_used": {
+          "prompt_tokens": 794,
+          "candidates_tokens": 79,
+          "total_tokens": 873
+        },
+        "estimated_cost_usd": 0.0005874,
+        "raw_response": "{\n  \"answer\": \"All transformed tables in the Gold analytical layer are formatted as Apache Iceberg v2 tables.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and direct\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and direct",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "Apache Iceberg v2",
+        "justification": "The model correctly identifies the table format used in the Gold analytical layer.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What table format is used?",
+        "answer": "All transformed tables in the Gold analytical layer are formatted as Apache Iceberg v2 tables.",
+        "stage_latencies": {
+          "stt": 0.498,
+          "llm": 10.591,
+          "tts": 0.0,
+          "total": 11.089
+        },
+        "tokens_used": {
+          "prompt_tokens": 642,
+          "candidates_tokens": 27,
+          "total_tokens": 669
+        },
+        "estimated_cost_usd": 7.5e-05,
+        "raw_response": "{\n  \"answer\": \"All transformed tables in the Gold analytical layer are formatted as Apache Iceberg v2 tables.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "Apache Iceberg v2",
+        "justification": "The model correctly identifies the table format used in the Gold analytical layer.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-02",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "factual",
+      "question": "What is the sustained ingestion SLA for raw transactional events captured from Kafka topics?",
+      "expected_answer": "Under 500 milliseconds (p95)",
+      "page_hint": "Page 1",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-02.wav",
+      "native": {
+        "answer": "The sustained ingestion SLA for raw transactional events is under 500 milliseconds (p95).",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 5.127,
+          "tts": 0.0,
+          "total": 5.127
+        },
+        "tokens_used": {
+          "prompt_tokens": 880,
+          "candidates_tokens": 83,
+          "total_tokens": 963
+        },
+        "estimated_cost_usd": 0.0006492,
+        "raw_response": "{\n  \"answer\": \"The sustained ingestion SLA for raw transactional events is under 500 milliseconds (p95).\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and inquisitive\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and inquisitive",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "under 500 milliseconds (p95)",
+        "justification": "The model accurately states the sustained ingestion SLA as required by the ground truth.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What is the sustained ingestion slough or rot transactional events captured from Kafka topics?",
+        "answer": "The sustained ingestion SLA for raw transactional events captured from Kafka topics is under 500 milliseconds (p95).",
+        "stage_latencies": {
+          "stt": 0.551,
+          "llm": 5.13,
+          "tts": 0.0,
+          "total": 5.681
+        },
+        "tokens_used": {
+          "prompt_tokens": 652,
+          "candidates_tokens": 33,
+          "total_tokens": 685
+        },
+        "estimated_cost_usd": 7.84e-05,
+        "raw_response": "{\n  \"answer\": \"The sustained ingestion SLA for raw transactional events captured from Kafka topics is under 500 milliseconds (p95).\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "under 500 milliseconds (p95)",
+        "justification": "The model accurately states the sustained ingestion SLA as required by the ground truth.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-03",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "factual",
+      "question": "How frequently does the Bronze to Silver compaction job run?",
+      "expected_answer": "Every 15 minutes",
+      "page_hint": "Page 1",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-03.wav",
+      "native": {
+        "answer": "The Bronze to Silver compaction job runs every 15 minutes.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 8.745,
+          "tts": 0.0,
+          "total": 8.745
+        },
+        "tokens_used": {
+          "prompt_tokens": 836,
+          "candidates_tokens": 74,
+          "total_tokens": 910
+        },
+        "estimated_cost_usd": 0.0006148,
+        "raw_response": "{\n  \"answer\": \"The Bronze to Silver compaction job runs every 15 minutes.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and straightforward\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and straightforward",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "every 15 minutes",
+        "justification": "The model correctly identifies the frequency of the compaction job.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "How frequently does the bronze to silver compaction job run?",
+        "answer": "The Bronze to Silver compaction job runs every 15 minutes.",
+        "stage_latencies": {
+          "stt": 0.529,
+          "llm": 6.602,
+          "tts": 0.0,
+          "total": 7.131
+        },
+        "tokens_used": {
+          "prompt_tokens": 647,
+          "candidates_tokens": 22,
+          "total_tokens": 669
+        },
+        "estimated_cost_usd": 7.35e-05,
+        "raw_response": "{\n  \"answer\": \"The Bronze to Silver compaction job runs every 15 minutes.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "every 15 minutes",
+        "justification": "The model correctly identifies the frequency of the compaction job.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-04",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "factual",
+      "question": "What compression algorithm and level are applied to Parquet files?",
+      "expected_answer": "ZSTD compression at level 3",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-04.wav",
+      "native": {
+        "answer": "Parquet files are compressed using ZSTD compression at compression level 3.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 15.522,
+          "tts": 0.0,
+          "total": 15.522
+        },
+        "tokens_used": {
+          "prompt_tokens": 841,
+          "candidates_tokens": 76,
+          "total_tokens": 917
+        },
+        "estimated_cost_usd": 0.0006191,
+        "raw_response": "{\n  \"answer\": \"Parquet files are compressed using ZSTD compression at compression level 3.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and direct\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and direct",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "ZSTD compression at compression level 3",
+        "justification": "The model provides the exact compression algorithm and level requested.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What compression algorithm and level are applied to parquet files?",
+        "answer": "Parquet files are compressed using ZSTD compression at compression level 3.",
+        "stage_latencies": {
+          "stt": 0.555,
+          "llm": 9.204,
+          "tts": 0.0,
+          "total": 9.759
+        },
+        "tokens_used": {
+          "prompt_tokens": 647,
+          "candidates_tokens": 24,
+          "total_tokens": 671
+        },
+        "estimated_cost_usd": 7.43e-05,
+        "raw_response": "{\n  \"answer\": \"Parquet files are compressed using ZSTD compression at compression level 3.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "ZSTD compression at compression level 3",
+        "justification": "The model provides the exact compression algorithm and level requested.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-05",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "factual",
+      "question": "How long are aggregated financial marts retained for regulatory compliance?",
+      "expected_answer": "7 years",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-05.wav",
+      "native": {
+        "answer": "Aggregated financial mart data is retained for 7 years to satisfy regulatory compliance (SOX / FINRA).",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 11.874,
+          "tts": 0.0,
+          "total": 11.874
+        },
+        "tokens_used": {
+          "prompt_tokens": 859,
+          "candidates_tokens": 85,
+          "total_tokens": 944
+        },
+        "estimated_cost_usd": 0.0006353,
+        "raw_response": "{\n  \"answer\": \"Aggregated financial mart data is retained for 7 years to satisfy regulatory compliance (SOX / FINRA).\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "7 years",
+        "justification": "The model correctly states the retention period for compliance.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "How long are aggregated financial marks retained for regulatory compliance?",
+        "answer": "Aggregated financial marts are retained for 7 years.",
+        "stage_latencies": {
+          "stt": 0.57,
+          "llm": 13.622,
+          "tts": 0.0,
+          "total": 14.193
+        },
+        "tokens_used": {
+          "prompt_tokens": 647,
+          "candidates_tokens": 20,
+          "total_tokens": 667
+        },
+        "estimated_cost_usd": 7.27e-05,
+        "raw_response": "{\n  \"answer\": \"Aggregated financial marts are retained for 7 years.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "7 years",
+        "justification": "The model correctly states the retention period for compliance.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-06",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "factual",
+      "question": "How often are Customer-Managed Encryption Keys (CMEK) rotated?",
+      "expected_answer": "Automatically every 90 days",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-06.wav",
+      "native": {
+        "answer": "Customer-Managed Encryption Keys (CMEK) are rotated automatically every 90 days.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 14.175,
+          "tts": 0.0,
+          "total": 14.175
+        },
+        "tokens_used": {
+          "prompt_tokens": 874,
+          "candidates_tokens": 81,
+          "total_tokens": 955
+        },
+        "estimated_cost_usd": 0.0006442,
+        "raw_response": "{\n  \"answer\": \"Customer-Managed Encryption Keys (CMEK) are rotated automatically every 90 days.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "automatically every 90 days",
+        "justification": "The model correctly identifies the rotation policy for CMEK.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "How often are customer-managed encryption keys, CMEK, rotated?",
+        "answer": "Customer-managed encryption keys (CMEK) are rotated automatically every 90 days.",
+        "stage_latencies": {
+          "stt": 0.582,
+          "llm": 5.523,
+          "tts": 0.0,
+          "total": 6.105
+        },
+        "tokens_used": {
+          "prompt_tokens": 650,
+          "candidates_tokens": 28,
+          "total_tokens": 678
+        },
+        "estimated_cost_usd": 7.62e-05,
+        "raw_response": "{\n  \"answer\": \"Customer-managed encryption keys (CMEK) are rotated automatically every 90 days.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "automatically every 90 days",
+        "justification": "The model correctly identifies the rotation policy for CMEK.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-07",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "factual",
+      "question": "What is the standardized Parquet row-group size?",
+      "expected_answer": "128 MB",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-07.wav",
+      "native": {
+        "answer": "The row-group size is standardized at 128 MB.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 30.522,
+          "tts": 0.0,
+          "total": 30.522
+        },
+        "tokens_used": {
+          "prompt_tokens": 816,
+          "candidates_tokens": 76,
+          "total_tokens": 892
+        },
+        "estimated_cost_usd": 0.0006016,
+        "raw_response": "{\n  \"answer\": \"The row-group size is standardized at 128 MB.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "128 MB",
+        "justification": "The model correctly reports the standardized row-group size.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What is the standardized parquet row group size?",
+        "answer": "The standardized row-group size is 128 MB.",
+        "stage_latencies": {
+          "stt": 0.463,
+          "llm": 12.36,
+          "tts": 0.0,
+          "total": 12.823
+        },
+        "tokens_used": {
+          "prompt_tokens": 645,
+          "candidates_tokens": 22,
+          "total_tokens": 667
+        },
+        "estimated_cost_usd": 7.33e-05,
+        "raw_response": "{\n  \"answer\": \"The standardized row-group size is 128 MB.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "128 MB",
+        "justification": "The model correctly reports the standardized row-group size.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-ADV-01",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "adversarial",
+      "question": "What is the annual cloud infrastructure budget allocated for the Lakehouse cluster?",
+      "expected_answer": "The document does not mention an annual cloud infrastructure budget.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-ADV-01.wav",
+      "native": {
+        "answer": "The document does not mention the annual cloud infrastructure budget allocated for the Lakehouse cluster.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 29.789,
+          "tts": 0.0,
+          "total": 29.789
+        },
+        "tokens_used": {
+          "prompt_tokens": 862,
+          "candidates_tokens": 78,
+          "total_tokens": 940
+        },
+        "estimated_cost_usd": 0.0006346,
+        "raw_response": "{\n  \"answer\": \"The document does not mention the annual cloud infrastructure budget allocated for the Lakehouse cluster.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and direct\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and direct",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention the annual cloud infrastructure budget",
+        "justification": "The model correctly identifies that the information is absent from the document.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "What is the annual cloud infrastructure budget allocated for the Lake House cluster?",
+        "answer": "The document does not mention the annual cloud infrastructure budget allocated for the Lake House cluster.",
+        "stage_latencies": {
+          "stt": 0.426,
+          "llm": 9.362,
+          "tts": 0.0,
+          "total": 9.788
+        },
+        "tokens_used": {
+          "prompt_tokens": 650,
+          "candidates_tokens": 26,
+          "total_tokens": 676
+        },
+        "estimated_cost_usd": 7.54e-05,
+        "raw_response": "{\n  \"answer\": \"The document does not mention the annual cloud infrastructure budget allocated for the Lake House cluster.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention the annual cloud infrastructure budget",
+        "justification": "The model correctly identifies that the information is absent from the document.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-ADV-02",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "adversarial",
+      "question": "Which Snowflake data warehouse warehouse sizing is recommended for downstream reporting?",
+      "expected_answer": "The document does not mention Snowflake; it specifies Google Cloud BigLake metastore catalog and GCS.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-ADV-02.wav",
+      "native": {
+        "answer": "The provided document does not mention Snowflake data warehouse or any recommendations for its sizing.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 13.431,
+          "tts": 0.0,
+          "total": 13.431
+        },
+        "tokens_used": {
+          "prompt_tokens": 870,
+          "candidates_tokens": 77,
+          "total_tokens": 947
+        },
+        "estimated_cost_usd": 0.0006398,
+        "raw_response": "{\n  \"answer\": \"The provided document does not mention Snowflake data warehouse or any recommendations for its sizing.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and inquisitive\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and inquisitive",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not mention Snowflake data warehouse",
+        "justification": "The model correctly resists the adversarial question by stating the document does not contain the mentioned software.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "which Snowflake Data Warehouse Warehouse sizing is recommended for downstream reporting.",
+        "answer": "The provided document does not mention Snowflake Data Warehouse sizing recommendations.",
+        "stage_latencies": {
+          "stt": 0.347,
+          "llm": 15.776,
+          "tts": 0.0,
+          "total": 16.123
+        },
+        "tokens_used": {
+          "prompt_tokens": 648,
+          "candidates_tokens": 21,
+          "total_tokens": 669
+        },
+        "estimated_cost_usd": 7.32e-05,
+        "raw_response": "{\n  \"answer\": \"The provided document does not mention Snowflake Data Warehouse sizing recommendations.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not mention Snowflake Data Warehouse sizing recommendations",
+        "justification": "The model correctly resists the adversarial question by stating the document does not contain the mentioned software.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-DLH-ADV-03",
+      "pdf": "cloud_data_lakehouse_architecture.pdf",
+      "question_type": "adversarial",
+      "question": "What version of Apache Flink is used for real-time streaming transformations?",
+      "expected_answer": "The document does not mention Apache Flink.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-DLH-ADV-03.wav",
+      "native": {
+        "answer": "The provided document does not mention the version of Apache Flink used.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 27.078,
+          "tts": 0.0,
+          "total": 27.078
+        },
+        "tokens_used": {
+          "prompt_tokens": 860,
+          "candidates_tokens": 76,
+          "total_tokens": 936
+        },
+        "estimated_cost_usd": 0.0006324,
+        "raw_response": "{\n  \"answer\": \"The provided document does not mention the version of Apache Flink used.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not mention the version of Apache Flink used.",
+        "justification": "The model correctly identifies that the document does not contain information about Apache Flink.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "What version of Apache Flink is used for real-time streaming transformations?",
+        "answer": "The document does not mention the version of Apache Flink used.",
+        "stage_latencies": {
+          "stt": 0.345,
+          "llm": 3.037,
+          "tts": 0.0,
+          "total": 3.382
+        },
+        "tokens_used": {
+          "prompt_tokens": 651,
+          "candidates_tokens": 22,
+          "total_tokens": 673
+        },
+        "estimated_cost_usd": 7.39e-05,
+        "raw_response": "{\n  \"answer\": \"The document does not mention the version of Apache Flink used.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention the version of Apache Flink used.",
+        "justification": "The model correctly identifies that the document does not contain information about Apache Flink.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-01",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "factual",
+      "question": "What is the investigational product name and code in the trial?",
+      "expected_answer": "Cardiovastin (CV-882)",
+      "page_hint": "Page 1",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-01.wav",
+      "native": {
+        "answer": "The investigational product name is Cardiovastin, and the code is CV-882.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 34.577,
+          "tts": 0.0,
+          "total": 34.577
+        },
+        "tokens_used": {
+          "prompt_tokens": 932,
+          "candidates_tokens": 82,
+          "total_tokens": 1014
+        },
+        "estimated_cost_usd": 0.0006852,
+        "raw_response": "{\n  \"answer\": \"The investigational product name is Cardiovastin, and the code is CV-882.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and direct\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and direct",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The investigational product name is Cardiovastin, and the code is CV-882.",
+        "justification": "The model accurately identifies both the product name and code as required by the ground truth.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What is the investigational product name and code in the trial?",
+        "answer": "The investigational product name is Cardiovastin and the code is CV-882.",
+        "stage_latencies": {
+          "stt": 0.356,
+          "llm": 14.962,
+          "tts": 0.0,
+          "total": 15.318
+        },
+        "tokens_used": {
+          "prompt_tokens": 748,
+          "candidates_tokens": 29,
+          "total_tokens": 777
+        },
+        "estimated_cost_usd": 8.64e-05,
+        "raw_response": "{\n  \"answer\": \"The investigational product name is Cardiovastin and the code is CV-882.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The investigational product name is Cardiovastin and the code is CV-882.",
+        "justification": "The model accurately identifies both the product name and code.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-02",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "factual",
+      "question": "How many total subjects will be enrolled and how are they stratified across cohorts?",
+      "expected_answer": "450 subjects total stratified 1:1:1 into three cohorts of 150 subjects each (Cardiovastin 25 mg",
+      "page_hint": " Cardiovastin 50 mg",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-02.wav",
+      "native": {
+        "answer": "A total of 450 adult subjects will be enrolled, stratified 1:1:1 into three parallel cohorts of 150 subjects each.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 16.706,
+          "tts": 0.0,
+          "total": 16.706
+        },
+        "tokens_used": {
+          "prompt_tokens": 968,
+          "candidates_tokens": 94,
+          "total_tokens": 1062
+        },
+        "estimated_cost_usd": 0.0007152,
+        "raw_response": "{\n  \"answer\": \"A total of 450 adult subjects will be enrolled, stratified 1:1:1 into three parallel cohorts of 150 subjects each.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "A total of 450 adult subjects will be enrolled, stratified 1:1:1 into three parallel cohorts of 150 subjects each.",
+        "justification": "The model correctly states the total subjects and the stratification methodology.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "How many total subjects will be enrolled and how are they stratified across cohorts?",
+        "answer": "A total of 450 adult subjects will be enrolled, stratified 1:1:1 into three parallel cohorts of 150 subjects each (Group A: 25 mg Cardiovastin, Group B: 50 mg Cardiovastin, and Group C: Placebo).",
+        "stage_latencies": {
+          "stt": 0.351,
+          "llm": 19.813,
+          "tts": 0.0,
+          "total": 20.164
+        },
+        "tokens_used": {
+          "prompt_tokens": 750,
+          "candidates_tokens": 72,
+          "total_tokens": 822
+        },
+        "estimated_cost_usd": 0.0001038,
+        "raw_response": "{\n  \"answer\": \"A total of 450 adult subjects will be enrolled, stratified 1:1:1 into three parallel cohorts of 150 subjects each (Group A: 25 mg Cardiovastin, Group B: 50 mg Cardiovastin, and Group C: Placebo).\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "A total of 450 adult subjects will be enrolled, stratified 1:1:1 into three parallel cohorts of 150 subjects each (Group A: 25 mg Cardiovastin, Group B: 50 mg Cardiovastin, and Group C: Placebo).",
+        "justification": "The model provides the correct total enrollment, stratification, and adds clarifying details regarding the cohorts.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-03",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "factual",
+      "question": "What resting systolic blood pressure range is required at screening?",
+      "expected_answer": "Between 140 mmHg and 179 mmHg",
+      "page_hint": "Page 1",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-03.wav",
+      "native": {
+        "answer": "At the time of screening, participants must have a documented resting systolic blood pressure between 140 mmHg and 179 mmHg.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 10.862,
+          "tts": 0.0,
+          "total": 10.862
+        },
+        "tokens_used": {
+          "prompt_tokens": 941,
+          "candidates_tokens": 89,
+          "total_tokens": 1030
+        },
+        "estimated_cost_usd": 0.0006943,
+        "raw_response": "{\n  \"answer\": \"At the time of screening, participants must have a documented resting systolic blood pressure between 140 mmHg and 179 mmHg.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"clear and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "clear and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "At the time of screening, participants must have a documented resting systolic blood pressure between 140 mmHg and 179 mmHg.",
+        "justification": "The model accurately states the required blood pressure range.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What resting systolic blood pressure range is required at screening?",
+        "answer": "140 mmHg to 179 mmHg",
+        "stage_latencies": {
+          "stt": 0.332,
+          "llm": 8.991,
+          "tts": 0.0,
+          "total": 9.322
+        },
+        "tokens_used": {
+          "prompt_tokens": 746,
+          "candidates_tokens": 20,
+          "total_tokens": 766
+        },
+        "estimated_cost_usd": 8.26e-05,
+        "raw_response": "{\n  \"answer\": \"140 mmHg to 179 mmHg\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "140 mmHg to 179 mmHg",
+        "justification": "The model provides the exact required range.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-04",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "factual",
+      "question": "What is the baseline estimated Glomerular Filtration Rate (eGFR) below which subjects are excluded?",
+      "expected_answer": "Below 30 mL/min/1.73 m^2",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-04.wav",
+      "native": {
+        "answer": "The document specifies an exclusion criterion of a baseline estimated Glomerular Filtration Rate (eGFR) below 30 mL/min/1.73 m^2.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 43.024,
+          "tts": 0.0,
+          "total": 43.024
+        },
+        "tokens_used": {
+          "prompt_tokens": 1020,
+          "candidates_tokens": 96,
+          "total_tokens": 1116
+        },
+        "estimated_cost_usd": 0.0007524,
+        "raw_response": "{\n  \"answer\": \"The document specifies an exclusion criterion of a baseline estimated Glomerular Filtration Rate (eGFR) below 30 mL/min/1.73 m^2.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"professional and focused\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "professional and focused",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document specifies an exclusion criterion of a baseline estimated Glomerular Filtration Rate (eGFR) below 30 mL/min/1.73 m^2.",
+        "justification": "The model correctly identifies the exclusion threshold.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What is the baseline estimated glomerular filtration rate, AGFR, below which subjects are excluded?",
+        "answer": "Subjects are excluded if their baseline estimated Glomerular Filtration Rate (eGFR) is below 30 mL/min/1.73 m^2.",
+        "stage_latencies": {
+          "stt": 0.389,
+          "llm": 15.681,
+          "tts": 0.0,
+          "total": 16.07
+        },
+        "tokens_used": {
+          "prompt_tokens": 753,
+          "candidates_tokens": 42,
+          "total_tokens": 795
+        },
+        "estimated_cost_usd": 9.21e-05,
+        "raw_response": "{\n  \"answer\": \"Subjects are excluded if their baseline estimated Glomerular Filtration Rate (eGFR) is below 30 mL/min/1.73 m^2.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "Subjects are excluded if their baseline estimated Glomerular Filtration Rate (eGFR) is below 30 mL/min/1.73 m^2.",
+        "justification": "The model correctly identifies the exclusion threshold.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-05",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "factual",
+      "question": "At what study weeks are 12-lead electrocardiograms (ECGs) scheduled to be recorded?",
+      "expected_answer": "Weeks 0",
+      "page_hint": " 4",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-05.wav",
+      "native": {
+        "answer": "12-lead electrocardiograms (ECGs) are scheduled to be recorded at Weeks 0, 4, 8, and 12.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 71.633,
+          "tts": 0.0,
+          "total": 71.633
+        },
+        "tokens_used": {
+          "prompt_tokens": 1004,
+          "candidates_tokens": 93,
+          "total_tokens": 1097
+        },
+        "estimated_cost_usd": 0.00074,
+        "raw_response": "{\n  \"answer\": \"12-lead electrocardiograms (ECGs) are scheduled to be recorded at Weeks 0, 4, 8, and 12.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and formal\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and formal",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "12-lead electrocardiograms (ECGs) are scheduled to be recorded at Weeks 0, 4, 8, and 12.",
+        "justification": "The model correctly lists the scheduled weeks for ECGs.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "At what study weeks are 12 lead electrocardiograms, ECGs, scheduled to be recorded?",
+        "answer": "12-lead electrocardiograms (ECGs) are scheduled to be recorded at Weeks 0, 4, 8, and 12.",
+        "stage_latencies": {
+          "stt": 0.397,
+          "llm": 6.72,
+          "tts": 0.0,
+          "total": 7.117
+        },
+        "tokens_used": {
+          "prompt_tokens": 755,
+          "candidates_tokens": 40,
+          "total_tokens": 795
+        },
+        "estimated_cost_usd": 9.15e-05,
+        "raw_response": "{\n  \"answer\": \"12-lead electrocardiograms (ECGs) are scheduled to be recorded at Weeks 0, 4, 8, and 12.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "12-lead electrocardiograms (ECGs) are scheduled to be recorded at Weeks 0, 4, 8, and 12.",
+        "justification": "The model correctly lists the scheduled weeks for ECGs.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-06",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "factual",
+      "question": "What threshold of Grade 3 hypotension triggers the predefined study halting criteria?",
+      "expected_answer": "Exceeding 2.5% in any active treatment arm",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-06.wav",
+      "native": {
+        "answer": "The predefined halting criteria are triggered if confirmed Grade 3 hypotension events exceed 2.5% in any active treatment arm.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 21.085,
+          "tts": 0.0,
+          "total": 21.085
+        },
+        "tokens_used": {
+          "prompt_tokens": 978,
+          "candidates_tokens": 89,
+          "total_tokens": 1067
+        },
+        "estimated_cost_usd": 0.0007202,
+        "raw_response": "{\n  \"answer\": \"The predefined halting criteria are triggered if confirmed Grade 3 hypotension events exceed 2.5% in any active treatment arm.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"formal and focused on specific details\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "formal and focused on specific details",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The predefined halting criteria are triggered if confirmed Grade 3 hypotension events exceed 2.5% in any active treatment arm.",
+        "justification": "The model accurately specifies the halting threshold.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What threshold of grade 3 hypertension triggers the predefined study halting criteria?",
+        "answer": "The study halting criteria are triggered if confirmed Grade 3 hypotension events exceed 2.5% in any active treatment arm.",
+        "stage_latencies": {
+          "stt": 0.36,
+          "llm": 8.106,
+          "tts": 0.0,
+          "total": 8.466
+        },
+        "tokens_used": {
+          "prompt_tokens": 749,
+          "candidates_tokens": 34,
+          "total_tokens": 783
+        },
+        "estimated_cost_usd": 8.85e-05,
+        "raw_response": "{\n  \"answer\": \"The study halting criteria are triggered if confirmed Grade 3 hypotension events exceed 2.5% in any active treatment arm.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The study halting criteria are triggered if confirmed Grade 3 hypotension events exceed 2.5% in any active treatment arm.",
+        "justification": "The model accurately specifies the halting threshold.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-07",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "factual",
+      "question": "What is the primary efficacy endpoint of the study?",
+      "expected_answer": "Placebo-subtracted change from baseline in mean sitting trough cuff SBP measured at Week 12",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-07.wav",
+      "native": {
+        "answer": "The primary efficacy endpoint is the placebo-subtracted change from baseline in mean sitting trough cuff systolic blood pressure (SBP) measured at Week 12.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 22.553,
+          "tts": 0.0,
+          "total": 22.553
+        },
+        "tokens_used": {
+          "prompt_tokens": 919,
+          "candidates_tokens": 94,
+          "total_tokens": 1013
+        },
+        "estimated_cost_usd": 0.0006809,
+        "raw_response": "{\n  \"answer\": \"The primary efficacy endpoint is the placebo-subtracted change from baseline in mean sitting trough cuff systolic blood pressure (SBP) measured at Week 12.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and formal\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and formal",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The primary efficacy endpoint is the placebo-subtracted change from baseline in mean sitting trough cuff systolic blood pressure (SBP) measured at Week 12.",
+        "justification": "The model correctly defines the primary efficacy endpoint.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What is the primary efficacy endpoint of the study?",
+        "answer": "The primary efficacy endpoint is the placebo-subtracted change from baseline in mean sitting trough cuff SBP measured at Week 12.",
+        "stage_latencies": {
+          "stt": 0.344,
+          "llm": 10.161,
+          "tts": 0.0,
+          "total": 10.505
+        },
+        "tokens_used": {
+          "prompt_tokens": 745,
+          "candidates_tokens": 37,
+          "total_tokens": 782
+        },
+        "estimated_cost_usd": 8.93e-05,
+        "raw_response": "{\n  \"answer\": \"The primary efficacy endpoint is the placebo-subtracted change from baseline in mean sitting trough cuff SBP measured at Week 12.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The primary efficacy endpoint is the placebo-subtracted change from baseline in mean sitting trough cuff SBP measured at Week 12.",
+        "justification": "The model correctly defines the primary efficacy endpoint.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-ADV-01",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "adversarial",
+      "question": "What is the recommended pediatric dosage for Cardiovastin in children under 12 years old?",
+      "expected_answer": "The document does not mention pediatric dosage; the trial is restricted to adults aged 35 to 75.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-ADV-01.wav",
+      "native": {
+        "answer": "The provided document does not mention a recommended pediatric dosage, and the study population is limited to adults aged 35 to 75 years.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 6.704,
+          "tts": 0.0,
+          "total": 6.704
+        },
+        "tokens_used": {
+          "prompt_tokens": 981,
+          "candidates_tokens": 90,
+          "total_tokens": 1071
+        },
+        "estimated_cost_usd": 0.0007227,
+        "raw_response": "{\n  \"answer\": \"The provided document does not mention a recommended pediatric dosage, and the study population is limited to adults aged 35 to 75 years.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and inquisitive\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and inquisitive",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not mention a recommended pediatric dosage, and the study population is limited to adults aged 35 to 75 years.",
+        "justification": "The model correctly identifies that the information is missing from the document.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "What is the recommended pediatric dosage for cardioveston in children under 12 years old?",
+        "answer": "The document does not mention a recommended pediatric dosage for Cardiovastin, as the study population is limited to adult subjects aged 35 to 75 years.",
+        "stage_latencies": {
+          "stt": 0.365,
+          "llm": 7.08,
+          "tts": 0.0,
+          "total": 7.445
+        },
+        "tokens_used": {
+          "prompt_tokens": 754,
+          "candidates_tokens": 43,
+          "total_tokens": 797
+        },
+        "estimated_cost_usd": 9.26e-05,
+        "raw_response": "{\n  \"answer\": \"The document does not mention a recommended pediatric dosage for Cardiovastin, as the study population is limited to adult subjects aged 35 to 75 years.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention a recommended pediatric dosage for Cardiovastin, as the study population is limited to adult subjects aged 35 to 75 years.",
+        "justification": "The model correctly identifies that the information is missing from the document.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-ADV-02",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "adversarial",
+      "question": "What percentage of participants experienced mild nausea during the Phase I trial?",
+      "expected_answer": "The document does not mention Phase I results or nausea rates.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-ADV-02.wav",
+      "native": {
+        "answer": "The provided document does not contain information regarding the percentage of participants who experienced mild nausea during the clinical trial.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 37.929,
+          "tts": 0.0,
+          "total": 37.929
+        },
+        "tokens_used": {
+          "prompt_tokens": 962,
+          "candidates_tokens": 84,
+          "total_tokens": 1046
+        },
+        "estimated_cost_usd": 0.000707,
+        "raw_response": "{\n  \"answer\": \"The provided document does not contain information regarding the percentage of participants who experienced mild nausea during the clinical trial.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"curious and seeking information\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "curious and seeking information",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not contain information regarding the percentage of participants who experienced mild nausea during the clinical trial.",
+        "justification": "The model correctly identifies that the information is missing from the document.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "What percentage of participants experienced mild nausea during the phase I trial?",
+        "answer": "The document does not mention the percentage of participants who experienced mild nausea, nor does it provide information regarding a Phase I trial.",
+        "stage_latencies": {
+          "stt": 0.361,
+          "llm": 13.717,
+          "tts": 0.0,
+          "total": 14.078
+        },
+        "tokens_used": {
+          "prompt_tokens": 748,
+          "candidates_tokens": 34,
+          "total_tokens": 782
+        },
+        "estimated_cost_usd": 8.84e-05,
+        "raw_response": "{\n  \"answer\": \"The document does not mention the percentage of participants who experienced mild nausea, nor does it provide information regarding a Phase I trial.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention the percentage of participants who experienced mild nausea, nor does it provide information regarding a Phase I trial.",
+        "justification": "The model correctly identifies that the information is missing from the document.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-CLIN-ADV-03",
+      "pdf": "clinical_cardiology_trial_protocol.pdf",
+      "question_type": "adversarial",
+      "question": "What is the commercial retail price per pill approved by the FDA?",
+      "expected_answer": "The document does not mention commercial pricing or FDA approval.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-CLIN-ADV-03.wav",
+      "native": {
+        "answer": "The provided document does not contain information regarding the commercial retail price of the pill, nor does it contain information about FDA approval.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 19.16,
+          "tts": 0.0,
+          "total": 19.16
+        },
+        "tokens_used": {
+          "prompt_tokens": 938,
+          "candidates_tokens": 86,
+          "total_tokens": 1024
+        },
+        "estimated_cost_usd": 0.000691,
+        "raw_response": "{\n  \"answer\": \"The provided document does not contain information regarding the commercial retail price of the pill, nor does it contain information about FDA approval.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and inquisitive\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and inquisitive",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not contain information regarding the commercial retail price of the pill, nor does it contain information about FDA approval.",
+        "justification": "The model correctly identifies that the information is missing from the document.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "What is the commercial retail price per pill approved by the FDA?",
+        "answer": "The document does not mention the commercial retail price per pill.",
+        "stage_latencies": {
+          "stt": 0.362,
+          "llm": 4.513,
+          "tts": 0.0,
+          "total": 4.875
+        },
+        "tokens_used": {
+          "prompt_tokens": 748,
+          "candidates_tokens": 21,
+          "total_tokens": 769
+        },
+        "estimated_cost_usd": 8.32e-05,
+        "raw_response": "{\n  \"answer\": \"The document does not mention the commercial retail price per pill.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention the commercial retail price per pill.",
+        "justification": "The model correctly identifies that the information is missing from the document.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-01",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "factual",
+      "question": "Which version of TLS is required for payment authorization requests?",
+      "expected_answer": "TLS version 1.3",
+      "page_hint": "Page 1",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-01.wav",
+      "native": {
+        "answer": "All incoming payment authorization requests must be transmitted over Transport Layer Security (TLS) version 1.3.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 32.536,
+          "tts": 0.0,
+          "total": 32.536
+        },
+        "tokens_used": {
+          "prompt_tokens": 853,
+          "candidates_tokens": 82,
+          "total_tokens": 935
+        },
+        "estimated_cost_usd": 0.0006299,
+        "raw_response": "{\n  \"answer\": \"All incoming payment authorization requests must be transmitted over Transport Layer Security (TLS) version 1.3.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and direct\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and direct",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "All incoming payment authorization requests must be transmitted over Transport Layer Security (TLS) version 1.3.",
+        "justification": "The model provides an exact and complete answer citing the correct TLS version.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "which version of TLS is required for payment authorization requests.",
+        "answer": "Transport Layer Security (TLS) version 1.3",
+        "stage_latencies": {
+          "stt": 0.345,
+          "llm": 7.826,
+          "tts": 0.0,
+          "total": 8.171
+        },
+        "tokens_used": {
+          "prompt_tokens": 643,
+          "candidates_tokens": 21,
+          "total_tokens": 664
+        },
+        "estimated_cost_usd": 7.27e-05,
+        "raw_response": "{\n  \"answer\": \"Transport Layer Security (TLS) version 1.3\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "Transport Layer Security (TLS) version 1.3",
+        "justification": "The model correctly identifies the required TLS version.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-02",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "factual",
+      "question": "What cryptographic algorithm is mandated for generating API request signatures?",
+      "expected_answer": "HMAC-SHA256",
+      "page_hint": "Page 1",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-02.wav",
+      "native": {
+        "answer": "The cryptographic request signature for API payloads must be generated via HMAC-SHA256.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 13.764,
+          "tts": 0.0,
+          "total": 13.764
+        },
+        "tokens_used": {
+          "prompt_tokens": 869,
+          "candidates_tokens": 80,
+          "total_tokens": 949
+        },
+        "estimated_cost_usd": 0.0006403,
+        "raw_response": "{\n  \"answer\": \"The cryptographic request signature for API payloads must be generated via HMAC-SHA256.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The cryptographic request signature for API payloads must be generated via HMAC-SHA256.",
+        "justification": "The model accurately identifies the mandatory cryptographic algorithm.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What cryptographic algorithm is mandated for generating API request signatures?",
+        "answer": "HMAC-SHA256",
+        "stage_latencies": {
+          "stt": 0.359,
+          "llm": 14.409,
+          "tts": 0.0,
+          "total": 14.768
+        },
+        "tokens_used": {
+          "prompt_tokens": 643,
+          "candidates_tokens": 17,
+          "total_tokens": 660
+        },
+        "estimated_cost_usd": 7.11e-05,
+        "raw_response": "{\n  \"answer\": \"HMAC-SHA256\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "HMAC-SHA256",
+        "justification": "The model correctly states the required algorithm.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-03",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "factual",
+      "question": "What is the maximum permitted timestamp skew before a request is rejected with HTTP 401?",
+      "expected_answer": "300 seconds (5 minutes)",
+      "page_hint": "Page 1",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-03.wav",
+      "native": {
+        "answer": "Payloads with a timestamp skew exceeding 300 seconds (5 minutes) are unconditionally rejected with HTTP error status 401 Unauthorized.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 25.88,
+          "tts": 0.0,
+          "total": 25.88
+        },
+        "tokens_used": {
+          "prompt_tokens": 905,
+          "candidates_tokens": 90,
+          "total_tokens": 995
+        },
+        "estimated_cost_usd": 0.0006695,
+        "raw_response": "{\n  \"answer\": \"Payloads with a timestamp skew exceeding 300 seconds (5 minutes) are unconditionally rejected with HTTP error status 401 Unauthorized.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"clear and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "clear and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "Payloads with a timestamp skew exceeding 300 seconds (5 minutes) are unconditionally rejected",
+        "justification": "The model correctly states the threshold and the impact.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What is the maximum permitted time stamp skew before a request is rejected with HTTP 401?",
+        "answer": "300 seconds (5 minutes)",
+        "stage_latencies": {
+          "stt": 0.369,
+          "llm": 7.231,
+          "tts": 0.0,
+          "total": 7.6
+        },
+        "tokens_used": {
+          "prompt_tokens": 652,
+          "candidates_tokens": 17,
+          "total_tokens": 669
+        },
+        "estimated_cost_usd": 7.2e-05,
+        "raw_response": "{\n  \"answer\": \"300 seconds (5 minutes)\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "300 seconds (5 minutes)",
+        "justification": "The model correctly provides the timestamp skew threshold.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-04",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "factual",
+      "question": "What action is automatically triggered if a payment card incurs a 6th transaction authorization within 10 minutes?",
+      "expected_answer": "A temporary 60-minute card hold",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-04.wav",
+      "native": {
+        "answer": "A 6th authorization within a 10-minute window automatically triggers a temporary 60-minute card hold.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 8.695,
+          "tts": 0.0,
+          "total": 8.695
+        },
+        "tokens_used": {
+          "prompt_tokens": 904,
+          "candidates_tokens": 86,
+          "total_tokens": 990
+        },
+        "estimated_cost_usd": 0.0006672,
+        "raw_response": "{\n  \"answer\": \"A 6th authorization within a 10-minute window automatically triggers a temporary 60-minute card hold.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"direct and inquisitive\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "direct and inquisitive",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "A 6th authorization within a 10-minute window automatically triggers a temporary 60-minute card hold.",
+        "justification": "The model correctly identifies the trigger condition and the resulting action.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What action is automatically triggered if a payment card incurs a 6th transaction authorization within 10 minutes?",
+        "answer": "A temporary 60-minute card hold.",
+        "stage_latencies": {
+          "stt": 0.363,
+          "llm": 24.606,
+          "tts": 0.0,
+          "total": 24.969
+        },
+        "tokens_used": {
+          "prompt_tokens": 654,
+          "candidates_tokens": 19,
+          "total_tokens": 673
+        },
+        "estimated_cost_usd": 7.3e-05,
+        "raw_response": "{\n  \"answer\": \"A temporary 60-minute card hold.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "A temporary 60-minute card hold.",
+        "justification": "The model correctly identifies the action taken.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-05",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "factual",
+      "question": "What transaction amount threshold requires Step-Up Two-Factor Authentication (3D-Secure 2.2)?",
+      "expected_answer": "Exceeding 400% of the cardholder's 30-day mean transaction value",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-05.wav",
+      "native": {
+        "answer": "A Step-Up Two-Factor Authentication (3D-Secure 2.2) is required for any single transaction amount exceeding 400% of the cardholder's 30-day mean transaction value.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 39.42,
+          "tts": 0.0,
+          "total": 39.42
+        },
+        "tokens_used": {
+          "prompt_tokens": 912,
+          "candidates_tokens": 107,
+          "total_tokens": 1019
+        },
+        "estimated_cost_usd": 0.0006812,
+        "raw_response": "{\n  \"answer\": \"A Step-Up Two-Factor Authentication (3D-Secure 2.2) is required for any single transaction amount exceeding 400% of the cardholder's 30-day mean transaction value.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"clear and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "clear and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "A Step-Up Two-Factor Authentication (3D-Secure 2.2) is required for any single transaction amount exceeding 400% of the cardholder's 30-day mean transaction value.",
+        "justification": "The model accurately specifies the threshold condition and the requirement.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What transaction amount threshold requires step up to factor authentication, 3D secure 2.2?",
+        "answer": "Any single transaction amount exceeding 400% of the cardholder's 30-day mean transaction value requires Step-Up Two-Factor Authentication (3D-Secure 2.2).",
+        "stage_latencies": {
+          "stt": 0.343,
+          "llm": 61.493,
+          "tts": 0.0,
+          "total": 61.836
+        },
+        "tokens_used": {
+          "prompt_tokens": 652,
+          "candidates_tokens": 51,
+          "total_tokens": 703
+        },
+        "estimated_cost_usd": 8.56e-05,
+        "raw_response": "{\n  \"answer\": \"Any single transaction amount exceeding 400% of the cardholder's 30-day mean transaction value requires Step-Up Two-Factor Authentication (3D-Secure 2.2).\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "Any single transaction amount exceeding 400% of the cardholder's 30-day mean transaction value requires Step-Up Two-Factor Authentication (3D-Secure 2.2).",
+        "justification": "The model accurately specifies the threshold condition and the requirement.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-06",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "factual",
+      "question": "How many calendar days do merchants have to submit rebuttal documentation for a chargeback?",
+      "expected_answer": "Exactly 14 calendar days from the notification date",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-06.wav",
+      "native": {
+        "answer": "Merchants have exactly 14 calendar days from the notification date to submit rebuttal documentation.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 34.549,
+          "tts": 0.0,
+          "total": 34.549
+        },
+        "tokens_used": {
+          "prompt_tokens": 873,
+          "candidates_tokens": 79,
+          "total_tokens": 952
+        },
+        "estimated_cost_usd": 0.0006427,
+        "raw_response": "{\n  \"answer\": \"Merchants have exactly 14 calendar days from the notification date to submit rebuttal documentation.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and direct\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and direct",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "Merchants have exactly 14 calendar days from the notification date to submit rebuttal documentation.",
+        "justification": "The model correctly identifies the rebuttal timeframe.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "How many calendar days do merchants have to submit rebuttal documentation for a chargeback?",
+        "answer": "Merchants have exactly 14 calendar days from the notification date to submit rebuttal documentation.",
+        "stage_latencies": {
+          "stt": 0.349,
+          "llm": 8.357,
+          "tts": 0.0,
+          "total": 8.707
+        },
+        "tokens_used": {
+          "prompt_tokens": 648,
+          "candidates_tokens": 27,
+          "total_tokens": 675
+        },
+        "estimated_cost_usd": 7.56e-05,
+        "raw_response": "{\n  \"answer\": \"Merchants have exactly 14 calendar days from the notification date to submit rebuttal documentation.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "Merchants have exactly 14 calendar days from the notification date to submit rebuttal documentation.",
+        "justification": "The model correctly identifies the rebuttal timeframe.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-07",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "factual",
+      "question": "What is the financial settlement SLA for issuing banks to complete dispute arbitration?",
+      "expected_answer": "Within 45 calendar days following the submission of rebuttal evidence",
+      "page_hint": "Page 2",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-07.wav",
+      "native": {
+        "answer": "The issuing bank must complete final dispute arbitration within 45 calendar days following the submission of rebuttal evidence.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 40.639,
+          "tts": 0.0,
+          "total": 40.639
+        },
+        "tokens_used": {
+          "prompt_tokens": 867,
+          "candidates_tokens": 82,
+          "total_tokens": 949
+        },
+        "estimated_cost_usd": 0.0006397,
+        "raw_response": "{\n  \"answer\": \"The issuing bank must complete final dispute arbitration within 45 calendar days following the submission of rebuttal evidence.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The issuing bank must complete final dispute arbitration within 45 calendar days following the submission of rebuttal evidence.",
+        "justification": "The model correctly states the settlement SLA.",
+        "abstention_correct": null
+      },
+      "cascade": {
+        "transcript": "What is the financial settlements law for issuing banks to complete dispute arbitration?",
+        "answer": "The issuing bank must complete final dispute arbitration within 45 calendar days following the submission of rebuttal evidence.",
+        "stage_latencies": {
+          "stt": 0.333,
+          "llm": 4.84,
+          "tts": 0.0,
+          "total": 5.172
+        },
+        "tokens_used": {
+          "prompt_tokens": 646,
+          "candidates_tokens": 30,
+          "total_tokens": 676
+        },
+        "estimated_cost_usd": 7.66e-05,
+        "raw_response": "{\n  \"answer\": \"The issuing bank must complete final dispute arbitration within 45 calendar days following the submission of rebuttal evidence.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The issuing bank must complete final dispute arbitration within 45 calendar days following the submission of rebuttal evidence.",
+        "justification": "The model correctly states the settlement SLA.",
+        "abstention_correct": null
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-ADV-01",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "adversarial",
+      "question": "What is the interchange transaction fee charged for Mastercard debit cards?",
+      "expected_answer": "The document does not mention interchange transaction fees.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-ADV-01.wav",
+      "native": {
+        "answer": "The provided document does not mention the interchange transaction fee charged for MasterCard debit cards.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 22.857,
+          "tts": 0.0,
+          "total": 22.857
+        },
+        "tokens_used": {
+          "prompt_tokens": 854,
+          "candidates_tokens": 79,
+          "total_tokens": 933
+        },
+        "estimated_cost_usd": 0.0006294,
+        "raw_response": "{\n  \"answer\": \"The provided document does not mention the interchange transaction fee charged for MasterCard debit cards.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and information-seeking\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and information-seeking",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not mention the interchange transaction fee charged for MasterCard debit cards.",
+        "justification": "The model correctly abstains from answering an unanswerable question.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "What is the interchange transaction fee charged for MasterCard debit cards?",
+        "answer": "The document does not mention the interchange transaction fee for MasterCard debit cards.",
+        "stage_latencies": {
+          "stt": 0.331,
+          "llm": 4.638,
+          "tts": 0.0,
+          "total": 4.969
+        },
+        "tokens_used": {
+          "prompt_tokens": 644,
+          "candidates_tokens": 23,
+          "total_tokens": 667
+        },
+        "estimated_cost_usd": 7.36e-05,
+        "raw_response": "{\n  \"answer\": \"The document does not mention the interchange transaction fee for MasterCard debit cards.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention the interchange transaction fee for MasterCard debit cards.",
+        "justification": "The model correctly abstains from answering an unanswerable question.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-ADV-02",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "adversarial",
+      "question": "Which biometric hardware scanner model is mandated for in-person POS fingerprint scanning?",
+      "expected_answer": "The document does not mention biometric hardware scanners.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-ADV-02.wav",
+      "native": {
+        "answer": "The provided document does not mention specific biometric hardware scanner models.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 12.667,
+          "tts": 0.0,
+          "total": 12.667
+        },
+        "tokens_used": {
+          "prompt_tokens": 883,
+          "candidates_tokens": 74,
+          "total_tokens": 957
+        },
+        "estimated_cost_usd": 0.0006477,
+        "raw_response": "{\n  \"answer\": \"The provided document does not mention specific biometric hardware scanner models.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"calm and professional\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "calm and professional",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not mention specific biometric hardware scanner models.",
+        "justification": "The model correctly abstains from answering an unanswerable question.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "which biometric hardware scanner model is mandated for in-person POS fingerprint scanning.",
+        "answer": "The document does not mention which biometric hardware scanner model is mandated for in-person POS fingerprint scanning.",
+        "stage_latencies": {
+          "stt": 0.65,
+          "llm": 11.088,
+          "tts": 0.0,
+          "total": 11.738
+        },
+        "tokens_used": {
+          "prompt_tokens": 647,
+          "candidates_tokens": 29,
+          "total_tokens": 676
+        },
+        "estimated_cost_usd": 7.63e-05,
+        "raw_response": "{\n  \"answer\": \"The document does not mention which biometric hardware scanner model is mandated for in-person POS fingerprint scanning.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention which biometric hardware scanner model is mandated for in-person POS fingerprint scanning.",
+        "justification": "The model correctly abstains from answering an unanswerable question.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    },
+    {
+      "question_id": "Q-FIN-ADV-03",
+      "pdf": "fintech_payment_security_spec.pdf",
+      "question_type": "adversarial",
+      "question": "What cryptocurrency assets are accepted for settlement on the payment switch?",
+      "expected_answer": "The document does not mention cryptocurrency assets or settlement.",
+      "page_hint": "None (unanswerable)",
+      "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio\\Q-FIN-ADV-03.wav",
+      "native": {
+        "answer": "The provided document does not mention what cryptocurrency assets are accepted for settlement on the payment switch.",
+        "stage_latencies": {
+          "stt": 0.0,
+          "llm": 316.762,
+          "tts": 0.0,
+          "total": 316.762
+        },
+        "tokens_used": {
+          "prompt_tokens": 852,
+          "candidates_tokens": 79,
+          "total_tokens": 931
+        },
+        "estimated_cost_usd": 0.000628,
+        "raw_response": "{\n  \"answer\": \"The provided document does not mention what cryptocurrency assets are accepted for settlement on the payment switch.\",\n  \"sentiment\": {\n    \"query_sentiment\": \"inquisitive\",\n    \"tone\": \"neutral and direct\",\n    \"confidence\": 1.0,\n    \"sentiment_score\": 0.0\n  }\n}",
+        "sentiment": {
+          "query_sentiment": "inquisitive",
+          "tone": "neutral and direct",
+          "confidence": 1.0,
+          "sentiment_score": 0.0
+        },
+        "error": null,
+        "score": 2,
+        "evidence_span": "The provided document does not mention what cryptocurrency assets are accepted for settlement on the payment switch.",
+        "justification": "The model correctly abstains from answering an unanswerable question.",
+        "abstention_correct": true
+      },
+      "cascade": {
+        "transcript": "What cryptocurrency assets are accepted for settlement on the payment switch?",
+        "answer": "The document does not mention which cryptocurrency assets are accepted for settlement.",
+        "stage_latencies": {
+          "stt": 0.341,
+          "llm": 6.375,
+          "tts": 0.0,
+          "total": 6.716
+        },
+        "tokens_used": {
+          "prompt_tokens": 644,
+          "candidates_tokens": 22,
+          "total_tokens": 666
+        },
+        "estimated_cost_usd": 7.32e-05,
+        "raw_response": "{\n  \"answer\": \"The document does not mention which cryptocurrency assets are accepted for settlement.\"\n}",
+        "error": null,
+        "score": 2,
+        "evidence_span": "The document does not mention which cryptocurrency assets are accepted for settlement.",
+        "justification": "The model correctly abstains from answering an unanswerable question.",
+        "abstention_correct": true
+      },
+      "arms_agree": true,
+      "disagreement_type": "none"
+    }
+  ]
+}
