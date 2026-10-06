@@ -28,3 +28,4 @@ uploads/*
 eval/data/
 eval/audio/
 !eval/results_latest.json
+!eval/results_comparison_latest.json
