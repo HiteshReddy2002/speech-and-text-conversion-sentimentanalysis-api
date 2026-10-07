@@ -26,7 +26,7 @@ Related Work Categories:
 
 ### 2.1 Cascade Equivalence Hypothesis (arXiv:2602.17598)
 - **Coverage:** The *Cascade Equivalence Hypothesis* investigates the theoretical and empirical conditions under which end-to-end multimodal speech architectures achieve representational and task parity with modular cascaded ASR→LLM systems in conversational and reasoning benchmarks.
-- **How Our Work Differs:** While their analysis focuses primarily on general speech-text alignment and open-domain dialogue, our study isolates *dense document grounding*, proving that strong external text priors actively repair phonetic ASR corruptions (*"slough or rot"* $\to$ *"SLA for raw"*) to achieve empirical parity while cascaded pipelines drastically win on operational latency (63.7% faster) and API cost (88.0% cheaper).
+- **How Our Work Differs:** While their analysis focuses primarily on general speech-text alignment and open-domain dialogue, our study isolates *dense document grounding*, proving that strong external text priors actively repair phonetic ASR corruptions (*"slough or rot"* $\to$ *"SLA for raw"*) to achieve empirical accuracy and latency parity while cascaded pipelines slash operational API cost by 87.8% (one-eighth the cost).
 
 ### 2.2 Full-Duplex-Bench v3 (arXiv:2604.04847)
 - **Coverage:** *Full-Duplex-Bench v3* benchmarks full-duplex interactive spoken dialogue systems, assessing turn-taking latency, backchanneling, interruptions, and real-time conversational flow between humans and conversational speech models.
@@ -96,4 +96,4 @@ The literature exhibits a persistent tension between:
 2. **The Cascaded Reality:** Modular ASR models (e.g., Whisper) paired with leading text LLMs offer independent model upgradeability, edge execution, and drastically lower computational overhead.
 
 Our paper bridges a critical gap unaddressed by prior benchmarks: **What happens when spoken question answering is strongly grounded in a reference document?**
-Prior work (e.g., *Spoken SQuAD*, *VākQA*) evaluated ungrounded or open-domain setups where ASR errors directly induce failure. We show that under document grounding, the language model uses the document text as an error-correcting prior, closing the accuracy gap and allowing the cascaded pipeline's 63.7% latency and 88.0% cost advantages to strictly dominate.
+Prior work (e.g., *Spoken SQuAD*, *VākQA*) evaluated ungrounded or open-domain setups where ASR errors directly induce failure. We show that under document grounding, the language model uses the document text as an error-correcting prior, closing the accuracy and latency gaps while allowing the cascaded pipeline's 87.8% cost advantage (one-eighth the API cost) to strictly dominate.
