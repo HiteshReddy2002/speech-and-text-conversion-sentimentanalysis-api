@@ -156,7 +156,8 @@ Respond ONLY with valid JSON in this exact structure:
             {"text": system_prompt},
             {"text": context_str},
             {"text": user_query_str}
-        ]
+        ],
+        request_options={"timeout": 90.0}
     )
     t_llm = time.perf_counter() - t0
 

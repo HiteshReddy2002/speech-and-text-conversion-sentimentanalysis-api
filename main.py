@@ -38,7 +38,7 @@ _GEMINI_KEY = os.environ.get("GEMINI_API_KEY")
 if _GEMINI_KEY:
     genai.configure(api_key=_GEMINI_KEY)
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
 MAX_DOCUMENT_CHARS = int(os.environ.get("MAX_DOCUMENT_CHARS", 50000))
 
 # ── Google Cloud TTS Client Setup (graceful degradation) ───────────────────────
