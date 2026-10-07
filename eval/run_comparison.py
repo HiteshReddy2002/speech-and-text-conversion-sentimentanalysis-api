@@ -83,7 +83,7 @@ def synthesize_missing_wavs(questions: List[Dict[str, str]]) -> int:
     synthesized = 0
     for q in questions:
         qid = q["question_id"]
-        qtext = q["question"]
+        qtext = q.get("question_text") or q.get("question", "")
         wav_path = AUDIO_DIR / f"{qid}.wav"
         if not (wav_path.exists() and wav_path.stat().st_size > 1000):
             logger.info(f"Synthesizing offline audio for [{qid}]...")
@@ -102,13 +102,17 @@ $s.Dispose()
     return synthesized
 
 
-def judge_batch(items: List[Dict[str, Any]], judge_model) -> Dict[str, Dict[str, Any]]:
+def judge_batch(items: List[Dict[str, Any]], judge_model, chunk_size: int = 10) -> Dict[str, Dict[str, Any]]:
     """
     Evaluates answers using the LLM-as-judge rubric from eval/RUBRIC.md.
-    Evaluates both native and cascade answers for given items in a batch.
+    Evaluates both native and cascade answers for given items in chunks to avoid output token limits.
     Returns mapping: f"{qid}___{arm}" -> {"score": int, "evidence_span": str, "justification": str}
     """
-    prompt = """You are an impartial, rigorous evaluation judge auditing an AI spoken document Q&A assistant according to eval/RUBRIC.md.
+    all_judgments: Dict[str, Dict[str, Any]] = {}
+
+    for chunk_start in range(0, len(items), chunk_size):
+        chunk_items = items[chunk_start:chunk_start + chunk_size]
+        prompt = """You are an impartial, rigorous evaluation judge auditing an AI spoken document Q&A assistant according to eval/RUBRIC.md.
 
 Scoring Rules:
 For factual questions:
@@ -127,37 +131,37 @@ You MUST provide an exact evidence quote span from the model answer justifying e
 Here are the Q&A pairs to evaluate:
 """
 
-    eval_targets = []
-    for item in items:
-        qid = item["question_id"]
-        qtype = item["question_type"]
-        question = item["question"]
-        expected = item["expected_answer"]
+        eval_targets = []
+        for item in chunk_items:
+            qid = item["question_id"]
+            qtype = item["question_type"]
+            question = item.get("question_text") or item.get("question", "")
+            expected = item.get("ground_truth") or item.get("expected_answer", "")
 
-        # Native answer
-        eval_targets.append({
-            "target_id": f"{qid}___native",
-            "qid": qid,
-            "arm": "native",
-            "type": qtype,
-            "question": question,
-            "expected": expected,
-            "answer": item["native"]["answer"]
-        })
+            # Native answer
+            eval_targets.append({
+                "target_id": f"{qid}___native",
+                "qid": qid,
+                "arm": "native",
+                "type": qtype,
+                "question": question,
+                "expected": expected,
+                "answer": item["native"]["answer"]
+            })
 
-        # Cascade answer
-        eval_targets.append({
-            "target_id": f"{qid}___cascade",
-            "qid": qid,
-            "arm": "cascade",
-            "type": qtype,
-            "question": question,
-            "expected": expected,
-            "answer": item["cascade"]["answer"]
-        })
+            # Cascade answer
+            eval_targets.append({
+                "target_id": f"{qid}___cascade",
+                "qid": qid,
+                "arm": "cascade",
+                "type": qtype,
+                "question": question,
+                "expected": expected,
+                "answer": item["cascade"]["answer"]
+            })
 
-    for idx, t in enumerate(eval_targets, 1):
-        prompt += f"""
+        for idx, t in enumerate(eval_targets, 1):
+            prompt += f"""
 --- Target {idx} ---
 Target ID: {t['target_id']}
 Question ID: {t['qid']} | Arm: {t['arm']}
@@ -168,7 +172,7 @@ Model Answer:
 \"\"\"{t['answer']}\"\"\"
 """
 
-    prompt += """
+        prompt += """
 Respond ONLY with a valid JSON array of objects in this exact structure:
 [
   {
@@ -181,34 +185,35 @@ Respond ONLY with a valid JSON array of objects in this exact structure:
 ]
 """
 
-    judge_resp = call_with_retry(judge_model.generate_content, prompt)
-    raw_judge = judge_resp.text.strip()
-    if raw_judge.startswith("```json"):
-        raw_judge = raw_judge[7:]
-    if raw_judge.startswith("```"):
-        raw_judge = raw_judge[3:]
-    if raw_judge.endswith("```"):
-        raw_judge = raw_judge[:-3]
-    raw_judge = raw_judge.strip()
+        judge_resp = call_with_retry(judge_model.generate_content, prompt, request_options={"timeout": 90.0})
+        raw_judge = judge_resp.text.strip()
+        if raw_judge.startswith("```json"):
+            raw_judge = raw_judge[7:]
+        if raw_judge.startswith("```"):
+            raw_judge = raw_judge[3:]
+        if raw_judge.endswith("```"):
+            raw_judge = raw_judge[:-3]
+        raw_judge = raw_judge.strip()
 
-    try:
-        judgments = json.loads(raw_judge)
-        return {j["target_id"]: j for j in judgments}
-    except Exception as e:
-        logger.error(f"Failed to parse batch judge response: {e}\nRaw: {raw_judge[:300]}")
-        # Fallback to individual scoring or safe default
-        score_map = {}
-        for t in eval_targets:
-            score_map[t["target_id"]] = {
-                "score": 0,
-                "evidence_span": "Parse error",
-                "justification": f"Judge response was invalid JSON: {str(e)}"
-            }
-        return score_map
+        try:
+            judgments = json.loads(raw_judge)
+            for j in judgments:
+                all_judgments[j["target_id"]] = j
+        except Exception as e:
+            logger.error(f"Failed to parse batch judge response: {e}\nRaw: {raw_judge[:300]}")
+            # Fallback to individual scoring or safe default
+            for t in eval_targets:
+                all_judgments[t["target_id"]] = {
+                    "score": 0,
+                    "evidence_span": "Parse error",
+                    "justification": f"Judge response was invalid JSON: {str(e)}"
+                }
+
+    return all_judgments
 
 
 def run_comparison(
-    dataset_path: Path = EVAL_DIR / "dataset.csv",
+    dataset_path: Optional[Path] = None,
     limit: Optional[int] = None,
     whisper_size: str = "base",
     delay_between_calls: float = 4.0,
@@ -218,11 +223,17 @@ def run_comparison(
     """
     Main comparative execution loop running Native and Cascade arms over the dataset.
     """
-    with open(dataset_path, "r", encoding="utf-8") as f:
-        questions = list(csv.DictReader(f))
+    if dataset_path is None:
+        v2_path = EVAL_DIR / "dataset_v2.csv"
+        dataset_path = v2_path if v2_path.exists() else (EVAL_DIR / "dataset.csv")
 
+    with open(dataset_path, "r", encoding="utf-8") as f:
+        all_questions = list(csv.DictReader(f))
+
+    total_dataset_questions = len(all_questions)
+    questions = all_questions
     if limit is not None and limit > 0:
-        questions = questions[:limit]
+        questions = all_questions[:limit]
 
     logger.info(f"Loaded {len(questions)} evaluation questions from {dataset_path.name}")
 
@@ -252,11 +263,11 @@ def run_comparison(
 
     for idx, q in enumerate(questions, 1):
         qid = q["question_id"]
-        pdf_name = q["pdf"]
+        pdf_name = q.get("pdf_id") or q.get("pdf")
         qtype = q["question_type"]
-        qtext = q["question"]
-        expected = q["expected_answer"]
-        page_hint = q["page_hint"]
+        qtext = q.get("question_text") or q.get("question")
+        expected = q.get("ground_truth") or q.get("expected_answer")
+        page_hint = q.get("evidence_span") or q.get("page_hint")
         wav_path = AUDIO_DIR / f"{qid}.wav"
 
         logger.info(f"\n=======================================================")
@@ -522,7 +533,10 @@ def run_comparison(
 
     # Save final results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out_file = EVAL_DIR / f"results_comparison_{timestamp}.json"
+    if len(processed_items) >= 200 or "v2" in dataset_path.name:
+        out_file = EVAL_DIR / f"results_comparison_n200_{timestamp}.json"
+    else:
+        out_file = EVAL_DIR / f"results_comparison_{timestamp}.json"
     latest_file = EVAL_DIR / "results_comparison_latest.json"
 
     comparison_payload = {
@@ -550,8 +564,8 @@ def run_comparison(
     with open(latest_file, "w", encoding="utf-8") as f:
         json.dump(comparison_payload, f, indent=2)
 
-    # Clean up checkpoint upon complete success
-    if checkpoint_file.exists():
+    # Clean up checkpoint only upon complete success of full dataset
+    if checkpoint_file.exists() and (limit is None or len(processed_items) >= total_dataset_questions):
         try:
             checkpoint_file.unlink()
         except Exception:
@@ -589,10 +603,12 @@ def run_comparison(
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Run Head-to-Head Comparative Study: Native vs. Cascade Arm")
+    parser.add_argument("--dataset", default=None, help="Dataset CSV path (default: eval/dataset_v2.csv if exists, else dataset.csv)")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of questions to evaluate (default: all)")
     parser.add_argument("--whisper-size", default="base", help="faster-whisper model size (default: base)")
     parser.add_argument("--delay", type=float, default=4.0, help="Delay between API calls in seconds (default: 4.0)")
     parser.add_argument("--no-cache", action="store_true", help="Do not load from checkpoint")
     args = parser.parse_args()
 
-    run_comparison(limit=args.limit, whisper_size=args.whisper_size, delay_between_calls=args.delay, no_cache=args.no_cache)
+    dataset_p = Path(args.dataset) if args.dataset else None
+    run_comparison(dataset_path=dataset_p, limit=args.limit, whisper_size=args.whisper_size, delay_between_calls=args.delay, no_cache=args.no_cache)

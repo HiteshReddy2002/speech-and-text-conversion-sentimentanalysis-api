@@ -167,7 +167,8 @@ Respond ONLY with valid JSON in this exact structure:
                     "data": audio_bytes
                 }
             }
-        ]
+        ],
+        request_options={"timeout": 90.0}
     )
     t_llm = time.perf_counter() - t0
 
