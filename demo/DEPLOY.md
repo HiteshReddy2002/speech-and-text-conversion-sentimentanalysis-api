@@ -65,16 +65,25 @@ git commit -m "Initial deploy: Speech & Sentiment Gradio demo"
 git push
 ```
 
-### 6. Monitor
+### 6. Monitor & Verify
 
 - Build logs are visible in the Space's **Logs** tab.
 - The live Space URL is: `https://huggingface.co/spaces/hitesh125/mini-chatbot` (Embed domain: `https://hitesh125-mini-chatbot.hf.space`)
 - Default repository target: `https://huggingface.co/spaces/hitesh125/speech-sentiment-demo`
 
+#### Verification Checklist:
+1. **Configure Secret:** In Space **Settings → Secrets**, ensure `GEMINI_API_KEY` is added.
+2. **Redeploy / Restart Space:** Click **Factory rebuild** or restart the Space to load the secret.
+3. **Voice Audio Test:** Upload a technical PDF, click the microphone button under **🎙️ Ask by voice (microphone)**, speak your question, and click **Ask Question**.
+4. **Inspect Readout:** Verify that:
+   - The banner indicates `🟢 LIVE MODE — Gemini Multimodal Connected`.
+   - The document summary and grounded answer are displayed.
+   - The **🎭 Vocal Tone & Sentiment Analysis** box displays the acoustic tone and sentiment breakdown extracted from the audio query.
+
 ---
 
 ## Notes
 
-- Without `GEMINI_API_KEY`, the demo runs in **mock mode** and still shows the UI cleanly.
-- For GCP Text-to-Speech (audio response feature), you'd also need to upload your service account JSON as a secret — see [HF Secrets docs](https://huggingface.co/docs/hub/spaces-overview#managing-secrets).
-- Free Spaces use CPU-only instances (2 vCPU, 16 GB RAM) — sufficient for this demo.
+- Without `GEMINI_API_KEY`, the demo runs in **mock mode** and shows an unmissable red banner with simulated mock responses.
+- For GCP Text-to-Speech (audio response synthesis), upload your service account JSON as a secret — see [HF Secrets docs](https://huggingface.co/docs/hub/spaces-overview#managing-secrets).
+- Free Spaces use CPU-only instances (2 vCPU, 16 GB RAM) — fully sufficient for this Gradio demo.
