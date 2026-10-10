@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Per-stage and end-to-end response latency statistics (seconds) across 200 spoken queries on commodity CPU (\texttt{faster-whisper-base} int8) and cloud Gemini 3.5 Flash-Lite, alongside historical pilot comparison showing API throttling artifacts.}
+\label{tab:latency}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Condition} & \textbf{Stage} & \textbf{Metric} & \textbf{Native Audio} & \textbf{Cascaded} & \textbf{Delta ($\Delta$)} \\
+\midrule
+Canonical $N=200$ & STT & Mean (p95) & 0.000s & 0.376s (0.409s) & +0.376s \\
+ & LLM & Mean (p95) & 24.511s (87.845s) & 29.011s (84.945s) & +4.500s \\
+ & TTS & Status & \textit{Skipped} & \textit{Skipped} & 0.000s \\
+\cmidrule{2-6}
+ & \textbf{Total E2E} & \textbf{Mean} & \textbf{24.511s} & \textbf{29.387s} & \textbf{+4.876s} ($p=0.470$) \\
+ & & \textbf{p95} & \textbf{87.845s} & \textbf{85.316s} & \textbf{-2.529s} \\
+ & & Min / Max & 3.558s / 120.488s & 4.093s / 118.899s & +0.535s / -1.589s \\
+\midrule
+Pilot $N=30$ (Confounded) & Total & Mean & 33.450s & 12.136s & -21.314s (-63.7\%) \\
+ & Total & p95 & 71.633s & 24.969s & -46.664s \\
+\bottomrule
+\end{tabular}
+\end{table}

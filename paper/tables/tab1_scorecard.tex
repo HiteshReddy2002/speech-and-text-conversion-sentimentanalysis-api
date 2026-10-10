@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Task performance on domain-specific spoken document question answering across 200 technical queries (141 factual, 59 unanswerable adversarial) across 8 domains under full document grounding.}
+\label{tab:scorecard}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Metric} & \textbf{Native Audio} & \textbf{Cascaded} & \textbf{Delta ($\Delta$)} & \textbf{Significance ($p$)} \\
+\midrule
+Factual Accuracy & 100.0\% (282/282) & 98.6\% (278/282) & -1.4\% & $p = 0.125$ (McNemar) \\
+-- Full Credit (Score 2) & 141 / 141 & 137 / 141 & -4 items & --- \\
+-- Partial Credit (Score 1) & 0 / 141 & 4 / 141 & +4 items & --- \\
+-- Missed (Score 0) & 0 / 141 & 0 / 141 & 0 & --- \\
+\midrule
+Adversarial Abstention & 100.0\% (59/59) & 100.0\% (59/59) & 0.0\% & $p = 1.000$ (McNemar) \\
+Hallucination Resistance & 100.0\% (118/118) & 100.0\% (118/118) & 0.0\% & $p = 1.000$ \\
+\midrule
+Overall Benchmark & 100.0\% (400/400) & 99.0\% (396/400) & -1.0\% & $p = 0.125$ \\
+Inter-Arm Agreement & 100.0\% (Base) & 98.0\% (196/200) & -2.0\% & 4 partial, 0 contradict. \\
+\bottomrule
+\end{tabular}
+\end{table}
