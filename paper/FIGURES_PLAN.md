@@ -126,3 +126,42 @@ Every table and figure planned for the paper is mapped directly to measured repo
   - Cascaded Pipeline ($N=200$): $(29.39\text{s}, \$0.000091/\text{query})$.
 - **Visual Callout:** Cascaded pipeline achieves latency parity with 87.8% cost savings ($8.2\times$ cheaper API inference).
 - **Data Source Reference:** `eval/results_comparison_latest.json` summary metrics.
+
+---
+
+## 9. Table 6: Acoustic Noise Robustness Matrix Across Calibrated SNR Ladder ($N = 60$)
+
+**Caption:** *Performance of Cascaded and Native-Audio pipelines across a calibrated additive Gaussian noise ladder (Clean, 20dB, 10dB, and 5dB SNR) on 60 stratified technical queries (40 factual, 20 adversarial) across 8 domains.*
+
+| Acoustic Condition | Target SNR | Pipeline Arm | Factual Accuracy Rate | Adversarial Abstention Rate | Overall Benchmark Score | Mean Whisper WER | Mean Latency (s) | Incurred API Cost (USD) | Data Source Key in `eval/results_noise_20261010_180151.json` |
+|:---|:---:|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---|
+| **Clean Control** | $\infty\text{ dB}$ | **Cascade** | **97.5%** (39/40) | 100.0% (20/20) | 98.3% (118/120 pts) | 11.2% | 2.49s | $0.0054 | `condition_metrics.clean.cascade.*` |
+| | | **Native** | **100.0%** (40/40) | 100.0% (20/20) | 100.0% (120/120 pts) | — | 3.12s | $0.0448 | `condition_metrics.clean.native.*` |
+| **Mild Noise** | $20\text{dB}$ | **Cascade** | **98.8%** (39.5/40) | 100.0% (20/20) | 99.2% (119/120 pts) | 11.8% | 2.63s | $0.0054 | `condition_metrics.snr20.cascade.*` |
+| | | **Native** | **100.0%** (40/40) | 100.0% (20/20) | 100.0% (120/120 pts) | — | 4.21s | $0.0447 | `condition_metrics.snr20.native.*` |
+| **Moderate Noise** | $10\text{dB}$ | **Cascade** | **100.0%** (40/40) | 100.0% (20/20) | 100.0% (120/120 pts) | 14.2% | 4.10s | $0.0054 | `condition_metrics.snr10.cascade.*` |
+| | | **Native** | **98.8%** (39.5/40) | 100.0% (20/20) | 99.2% (119/120 pts) | — | 2.70s | $0.0447 | `condition_metrics.snr10.native.*` |
+| **Severe Noise** | $5\text{dB}$ | **Cascade** | **97.5%** (39/40) | 100.0% (20/20) | 98.3% (118/120 pts) | 15.4% | 6.27s | $0.0054 | `condition_metrics.snr5.cascade.*` |
+| | | **Native** | **98.8%** (39.5/40) | 95.0% (19/20) | 97.5% (117/120 pts) | — | 5.05s | $0.0440 | `condition_metrics.snr5.native.*` |
+
+*Methods Note on WER:* WER is reported against ground-truth question prompt text $Q_{\text{prompt}}$ across all $N=60$ questions (`condition_metrics[cond].cascade.mean_wer`). Baseline clean WER (11.2%) reflects standard orthographic/punctuation/acronym variations (e.g., "SOX", "CDL"). Phase 1 relative acoustic drift on the $N=5$ calibration set ($0.00\% \rightarrow 3.21\% \rightarrow 6.84\% \rightarrow 8.51\%$) confirmed monotonic degradation prior to scaling.
+
+---
+
+## 10. Figure 4: ASR Word Error Rate vs. Spoken QA Accuracy Trajectory
+
+**Caption:** *Trajectory of Speech-to-Text Word Error Rate (Whisper int8) and downstream Spoken Question Answering factual accuracy across the acoustic noise ladder (Clean $\rightarrow$ 20dB $\rightarrow$ 10dB $\rightarrow$ 5dB SNR). Despite WER rising from 11.2% to 15.4%, document-grounded context repair preserves $\ge 97.5\%$ factual accuracy on both arms.*
+
+- **Type:** Dual-Axis Line Plot / Trajectory Diagram.
+  - X-Axis: Acoustic Degradation Condition (Clean $\to$ 20dB SNR $\to$ 10dB SNR $\to$ 5dB SNR).
+  - Left Y-Axis: Factual QA Accuracy (%) [Range: 90% – 102%].
+  - Right Y-Axis: Speech-to-Text WER (%) [Range: 0% – 20%].
+- **Traces & Series:**
+  1. *ASR WER (Whisper int8):* Clean: 11.2% (0.1125) $\to$ 20dB: 11.8% (0.1179) $\to$ 10dB: 14.2% (0.1416) $\to$ 5dB: 15.4% (0.1542) [Red dashed line, markers at each condition].
+  2. *Cascade Factual Accuracy:* Clean: 97.5% $\to$ 20dB: 98.8% $\to$ 10dB: 100.0% $\to$ 5dB: 97.5% [Blue solid line, markers at each condition].
+  3. *Native Factual Accuracy:* Clean: 100.0% $\to$ 20dB: 100.0% $\to$ 10dB: 98.8% $\to$ 5dB: 98.8% [Green solid line, markers at each condition].
+- **Key Visual Callouts:**
+  - *Breakdown Threshold Zone:* Neither arm crosses the $>5.0\%$ drop threshold (92.5% on Cascade, 95.0% on Native); both arms are resilient down to 5dB SNR.
+  - *Inversion Point at 10dB SNR:* Cascade achieves 100.0% factual accuracy, surpassing Native (98.8%) by $+1.2\%$ due to document-context transcript error recovery.
+  - *Abstention Note:* Cascade maintains 100.0% adversarial refusal down to 5dB; Native slips to 95.0% at 5dB due to single hallucination.
+- **Data Source Reference:** `eval/results_noise_20261010_180151.json` (`condition_metrics`, `breakdown_points`), `eval/NOISE_ROBUSTNESS_REPORT.md` (Sections 3 & 5).
