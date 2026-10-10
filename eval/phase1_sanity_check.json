@@ -1,0 +1,9 @@
+{
+  "mean_wers": {
+    "clean": 0.0,
+    "snr20": 0.0321,
+    "snr10": 0.0684,
+    "snr5": 0.0851
+  },
+  "is_monotonic": true
+}

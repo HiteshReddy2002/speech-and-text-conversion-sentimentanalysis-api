@@ -27,5 +27,10 @@ uploads/*
 # Evaluation runtime data & generated audio
 eval/data/
 eval/audio/
+eval/audio_noise/
+eval/checkpoint_noise_benchmark.json
 !eval/results_latest.json
 !eval/results_comparison_latest.json
+!eval/results_noise_*.json
+!eval/noise_audio_metadata.json
+!eval/phase1_sanity_check.json

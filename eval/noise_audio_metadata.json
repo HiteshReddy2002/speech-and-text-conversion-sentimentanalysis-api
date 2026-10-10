@@ -1,0 +1,1202 @@
+{
+  "Q-AERO-04": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-04_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-04_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-04_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-04_snr5.wav"
+      }
+    }
+  },
+  "Q-AERO-03": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-03_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-03_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-03_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-03_snr5.wav"
+      }
+    }
+  },
+  "Q-AERO-14": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-14_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-14_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-14_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-14_snr5.wav"
+      }
+    }
+  },
+  "Q-AERO-01": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-01_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-01_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-01_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-01_snr5.wav"
+      }
+    }
+  },
+  "Q-AERO-15": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-15_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-15_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-15_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-15_snr5.wav"
+      }
+    }
+  },
+  "Q-AERO-ADV-01": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-01_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-01_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-01_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-01_snr5.wav"
+      }
+    }
+  },
+  "Q-AERO-ADV-02": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-02_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-02_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-02_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-02_snr5.wav"
+      }
+    }
+  },
+  "Q-AERO-ADV-06": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-06_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-06_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-06_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AERO-ADV-06_snr5.wav"
+      }
+    }
+  },
+  "Q-CLIN-17": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-17_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-17_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-17_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-17_snr5.wav"
+      }
+    }
+  },
+  "Q-CLIN-01": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-01_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-01_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-01_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-01_snr5.wav"
+      }
+    }
+  },
+  "Q-CLIN-09": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-09_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-09_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-09_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-09_snr5.wav"
+      }
+    }
+  },
+  "Q-CLIN-04": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-04_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-04_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-04_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-04_snr5.wav"
+      }
+    }
+  },
+  "Q-CLIN-12": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-12_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-12_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-12_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-12_snr5.wav"
+      }
+    }
+  },
+  "Q-CLIN-ADV-07": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-ADV-07_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-ADV-07_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-ADV-07_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-ADV-07_snr5.wav"
+      }
+    }
+  },
+  "Q-CLIN-ADV-02": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-ADV-02_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-ADV-02_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-ADV-02_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-CLIN-ADV-02_snr5.wav"
+      }
+    }
+  },
+  "Q-ONCO-15": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-15_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-15_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-15_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-15_snr5.wav"
+      }
+    }
+  },
+  "Q-ONCO-09": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-09_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-09_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-09_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-09_snr5.wav"
+      }
+    }
+  },
+  "Q-ONCO-01": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-01_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-01_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-01_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-01_snr5.wav"
+      }
+    }
+  },
+  "Q-ONCO-13": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-13_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-13_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-13_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-13_snr5.wav"
+      }
+    }
+  },
+  "Q-ONCO-18": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-18_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-18_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-18_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-18_snr5.wav"
+      }
+    }
+  },
+  "Q-ONCO-ADV-02": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-ADV-02_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-ADV-02_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-ADV-02_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-ADV-02_snr5.wav"
+      }
+    }
+  },
+  "Q-ONCO-ADV-06": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-ADV-06_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-ADV-06_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-ADV-06_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-ONCO-ADV-06_snr5.wav"
+      }
+    }
+  },
+  "Q-DLH-14": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-14_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-14_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-14_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-14_snr5.wav"
+      }
+    }
+  },
+  "Q-DLH-11": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-11_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-11_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-11_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-11_snr5.wav"
+      }
+    }
+  },
+  "Q-DLH-05": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-05_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-05_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-05_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-05_snr5.wav"
+      }
+    }
+  },
+  "Q-DLH-03": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-03_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-03_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-03_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.001,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-03_snr5.wav"
+      }
+    }
+  },
+  "Q-DLH-04": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-04_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-04_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-04_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-04_snr5.wav"
+      }
+    }
+  },
+  "Q-DLH-ADV-06": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-ADV-06_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-ADV-06_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-ADV-06_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-ADV-06_snr5.wav"
+      }
+    }
+  },
+  "Q-DLH-ADV-01": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-ADV-01_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-ADV-01_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-ADV-01_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-DLH-ADV-01_snr5.wav"
+      }
+    }
+  },
+  "Q-K8S-03": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-03_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-03_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-03_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-03_snr5.wav"
+      }
+    }
+  },
+  "Q-K8S-13": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-13_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-13_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-13_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-13_snr5.wav"
+      }
+    }
+  },
+  "Q-K8S-04": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-04_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-04_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-04_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-04_snr5.wav"
+      }
+    }
+  },
+  "Q-K8S-06": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-06_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-06_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-06_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-06_snr5.wav"
+      }
+    }
+  },
+  "Q-K8S-14": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-14_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-14_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-14_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.001,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-14_snr5.wav"
+      }
+    }
+  },
+  "Q-K8S-ADV-03": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-03_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-03_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-03_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-03_snr5.wav"
+      }
+    }
+  },
+  "Q-K8S-ADV-05": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-05_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-05_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-05_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.001,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-05_snr5.wav"
+      }
+    }
+  },
+  "Q-K8S-ADV-07": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-07_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-07_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-07_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-K8S-ADV-07_snr5.wav"
+      }
+    }
+  },
+  "Q-AUD-02": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-02_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-02_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-02_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-02_snr5.wav"
+      }
+    }
+  },
+  "Q-AUD-15": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-15_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-15_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-15_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.001,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-15_snr5.wav"
+      }
+    }
+  },
+  "Q-AUD-04": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-04_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-04_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-04_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-04_snr5.wav"
+      }
+    }
+  },
+  "Q-AUD-17": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-17_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-17_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-17_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-17_snr5.wav"
+      }
+    }
+  },
+  "Q-AUD-07": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-07_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-07_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-07_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-07_snr5.wav"
+      }
+    }
+  },
+  "Q-AUD-ADV-01": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-ADV-01_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-ADV-01_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-ADV-01_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-ADV-01_snr5.wav"
+      }
+    }
+  },
+  "Q-AUD-ADV-05": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-ADV-05_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-ADV-05_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-ADV-05_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.001,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-AUD-ADV-05_snr5.wav"
+      }
+    }
+  },
+  "Q-FIN-10": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-10_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-10_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-10_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-10_snr5.wav"
+      }
+    }
+  },
+  "Q-FIN-12": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-12_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-12_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-12_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-12_snr5.wav"
+      }
+    }
+  },
+  "Q-FIN-17": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-17_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-17_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-17_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-17_snr5.wav"
+      }
+    }
+  },
+  "Q-FIN-04": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-04_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-04_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-04_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-04_snr5.wav"
+      }
+    }
+  },
+  "Q-FIN-16": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-16_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-16_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-16_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.001,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-16_snr5.wav"
+      }
+    }
+  },
+  "Q-FIN-ADV-02": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-02_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-02_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-02_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-02_snr5.wav"
+      }
+    }
+  },
+  "Q-FIN-ADV-01": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-01_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-01_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-01_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-01_snr5.wav"
+      }
+    }
+  },
+  "Q-FIN-ADV-06": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-06_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-06_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-06_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-FIN-ADV-06_snr5.wav"
+      }
+    }
+  },
+  "Q-LOG-08": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-08_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-08_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-08_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-08_snr5.wav"
+      }
+    }
+  },
+  "Q-LOG-10": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-10_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-10_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-10_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-10_snr5.wav"
+      }
+    }
+  },
+  "Q-LOG-03": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-03_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-03_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-03_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-03_snr5.wav"
+      }
+    }
+  },
+  "Q-LOG-14": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-14_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-14_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-14_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-14_snr5.wav"
+      }
+    }
+  },
+  "Q-LOG-04": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-04_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-04_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-04_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-04_snr5.wav"
+      }
+    }
+  },
+  "Q-LOG-ADV-07": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-07_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-07_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-07_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-07_snr5.wav"
+      }
+    }
+  },
+  "Q-LOG-ADV-01": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-01_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-01_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-01_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.001,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-01_snr5.wav"
+      }
+    }
+  },
+  "Q-LOG-ADV-04": {
+    "clean_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-04_clean.wav",
+    "snr_variants": {
+      "snr20": {
+        "target_snr": 20.0,
+        "empirical_snr": 20.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-04_snr20.wav"
+      },
+      "snr10": {
+        "target_snr": 10.0,
+        "empirical_snr": 10.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-04_snr10.wav"
+      },
+      "snr5": {
+        "target_snr": 5.0,
+        "empirical_snr": 5.0,
+        "wav_path": "C:\\Users\\hites\\.gemini\\antigravity-ide\\scratch\\speech-and-text-conversion-sentimentanalysis-api\\eval\\audio_noise\\Q-LOG-ADV-04_snr5.wav"
+      }
+    }
+  }
+}
