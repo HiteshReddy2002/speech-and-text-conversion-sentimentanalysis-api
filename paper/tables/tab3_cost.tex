@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Token consumption and estimated API operational cost across 200 spoken queries using Gemini 3.5 Flash-Lite list pricing (\$0.10/1M text in, \$0.70/1M audio in, \$0.40/1M text out).}
+\label{tab:cost}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Metric} & \textbf{Native Audio} & \textbf{Cascaded} & \textbf{Delta} & \textbf{Percent Change} \\
+\midrule
+Input Unit Price & \$0.70 / 1M (audio) & \$0.10 / 1M (text) & -\$0.60 / 1M & -85.7\% \\
+Output Unit Price & \$0.40 / 1M (text) & \$0.40 / 1M (text) & \$0.00 & 0.0\% \\
+\midrule
+Total Prompt Tokens & 199,440 & 157,419 & -42,021 & -21.1\% \\
+Total Candidate Tokens & 20,619 & 6,724 & -13,895 & -67.4\% \\
+\textbf{Total Tokens Consumed} & \textbf{220,059} & \textbf{164,143} & \textbf{-55,916} & \textbf{-25.4\%} \\
+\midrule
+\textbf{Theoretical API Cost} & \textbf{\$0.14889} & \textbf{\$0.01814} & \textbf{-\$0.13075} & \textbf{-87.8\%} ($8.2\times$ cheaper) \\
+Bootstrap 95\% CI & --- & --- & [-\$0.1345, -\$0.1268] & [-88.1\%, -87.4\%] \\
+\bottomrule
+\end{tabular}
+\end{table}

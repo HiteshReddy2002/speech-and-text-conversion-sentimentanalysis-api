@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Comparative accuracy between intermediate document summarization and full document context injection, demonstrating that intermediate context compression is the true accuracy bottleneck.}
+\label{tab:ablation}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Pipeline Configuration} & \textbf{Context Method} & \textbf{Items ($N$)} & \textbf{Factual Acc.} & \textbf{Abstention} \\
+\midrule
+Compressed Context & Intermediate Summary ($\sim$500 words) & $N=12$ & 66.7\% & 100.0\% \\
+Full Document Grounding & Complete Text ($\le$50k chars) & $N=200$ & 100.0\% (Native) & 100.0\% \\
+ & & & 98.6\% (Cascade) & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

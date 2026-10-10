@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Representative case studies from the 200-item evaluation illustrating acoustic transcription distortions resolved by document context priors, alongside the partial-credit disagreement cases docked by judge strictness.}
+\label{tab:phonetic}
+\begin{tabularx}{\textwidth}{lp{2.4cm}p{4.2cm}p{3.8cm}X}
+\toprule
+\textbf{ID} & \textbf{Domain} & \textbf{Ground Truth Spoken Query} & \textbf{Whisper STT Transcript} & \textbf{Document Context Recovery Mechanism} \\
+\midrule
+\texttt{Q-K8S-01} & Cloud SRE & ``runbook title for Kubernetes incident response'' & ``runbook title for \textbf{Cabernet's} incident response'' & Runbook header grounds \texttt{SRE-K8S-RUNBOOK-V5}. \\
+\texttt{Q-K8S-16} & Cloud SRE & ``how frequently are automated etcd snapshots'' & ``how frequently are automated \textbf{ect} snapshots'' & Snapshot policy section explicitly grounds 6-hour interval. \\
+\texttt{Q-ONCO-13} & Oncology & ``expression threshold of Claudin-18.2'' & ``expression threshold of \textbf{clot in 18.2}'' & Inclusion criteria table grounds target antigen ($\ge 70\%$). \\
+\texttt{Q-DLH-02} & Data Eng & ``sustained ingestion SLA for raw events'' & ``sustained ingestion \textbf{slough or rot} events'' & Kafka topic SLA table grounds $< 500$\,ms (p95). \\
+\texttt{Q-CLIN-04} & Cardiology & ``estimated Glomerular Filtration Rate (eGFR)'' & ``estimated glomerular filtration rate, \textbf{AGFR}'' & Expanded medical term disambiguates acronym; $< 30$\,mL/min. \\
+\midrule
+\texttt{Q-AERO-14} & Avionics & Power spectral density across 20\,Hz to 2,000\,Hz & Clean STT (7.7\,g\_rms retrieved) & Partial credit (1/2): docked for omitting frequency range. \\
+\texttt{Q-ONCO-18} & Oncology & Cryopreservation temperature of serum PK & Clean STT ($-80.0^\circ$C retrieved) & Partial credit (1/2): docked for omitting vapor-phase medium. \\
+\bottomrule
+\end{tabularx}
+\end{table*}
